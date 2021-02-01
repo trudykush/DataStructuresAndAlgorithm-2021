@@ -22,11 +22,29 @@ public class TransposeOfMatrix {
             }
 
             // method to transpose the matrix
-            matrixTranspose(testMatrix, r1, c1);
+            int[][] result = matrixTranspose(testMatrix, r1, c1);
+
+            printMatrix(result);
         }
     }
 
-    private static void matrixTranspose(int[][] testMatrix, int r1, int c1) {
+    private static void printMatrix(int[][] result) {
+        for (int[] ints : result) {
+            for (int j = 0; j < result[0].length; j++) {
+                System.out.print(ints[j] + " ");
+            }
+            System.out.println();
+        }
+    }
 
+    private static int[][] matrixTranspose(int[][] testMatrix, int r1, int c1) {
+        for (int i = 0; i < r1; i++) {
+            for (int j = i+1; j < c1; j++) {
+                int temp = testMatrix[i][j];
+                testMatrix[i][j] = testMatrix[j][i];
+                testMatrix[j][i] = temp;
+            }
+        }
+        return testMatrix;
     }
 }
