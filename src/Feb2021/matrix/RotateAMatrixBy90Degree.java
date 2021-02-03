@@ -35,10 +35,31 @@ public class RotateAMatrixBy90Degree {
     private static void rotatingMatrix(int[][] matrix) {
         // To rotate a matrix by 90 degree -
         // First: Take the Transpose of the Matrix
-        //transposeMatrix(matrix);
+        transposeMatrix(matrix);
 
         // Second: Swap the elements in each column
-        //reverseColumnElements(matrix);
+        reverseColumnElements(matrix);
     }
+
+    private static void reverseColumnElements(int[][] matrix) {
+        for (int i = 0; i < matrix[0].length; i++) {
+            for (int j = 0, k = matrix[0].length - 1; j < k; j++, k--) {
+                int temp = matrix[j][i];
+                matrix[j][i] = matrix[k][i];
+                matrix[k][i] = temp;
+            }
+        }
+    }
+
+    private static void transposeMatrix(int[][] matrix) {
+        for (int i = 0; i < matrix[0].length; i++) {
+            for (int j = i; j < matrix[0].length; j++) {
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
+            }
+        }
+    }
+
 
 }
