@@ -18,10 +18,27 @@ public class RotateAMatrixBy90Degree {
                 }
             }
             
-            //rotatingMatrix(matrix);
-            //printingResult(matrix);
+            rotatingMatrix(matrix);
+            printingResult(matrix);
         }
     }
 
+    private static void printingResult(int[][] matrix) {
+        for (int[] ints : matrix) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                System.out.print(ints[j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    private static void rotatingMatrix(int[][] matrix) {
+        // To rotate a matrix by 90 degree -
+        // First: Take the Transpose of the Matrix
+        //transposeMatrix(matrix);
+
+        // Second: Swap the elements in each column
+        //reverseColumnElements(matrix);
+    }
 
 }
