@@ -36,14 +36,31 @@ public class RotateMatrixBy90Degree_SecondMethod {
             }
 
             rotatingMatrix(matrix, rowsAndColumn);
+          //  displayMatrix(matrix);
         }
     }
+
 
     private static void rotatingMatrix(int[][] matrix, int N) {
         // Consider all squares one by one
         for (int i = 0; i < N / 2; i++) {
-            for (int j = 0; j < N - i - 1; j++) {
+            // Consider elements in group of 4 in current square
+            for (int j = i; j < N - i - 1; j++) {
+                // Store current cell in temp variable
+                int temp = matrix[i][j];
 
+                // Move the element from right to top
+                matrix[i][j] = matrix[j][N - 1 - i];
+
+                // Move the element from bottom to right
+                matrix[j][N - 1 - i] = matrix[N - 1 - i][N - 1 - j];
+
+                // Move values from left to bottom
+                matrix[N - 1 - i][N - 1 - j] =
+                            matrix[N - 1 - j][i];
+
+                // Assign temp to left
+                matrix[N - 1 - j][i] = temp;
             }
         }
     }
