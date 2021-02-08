@@ -1,31 +1,35 @@
 
 fun main(args: Array<String>) {
-    var numberOfCases: Int = readLine()!!.toInt()
+    var isSorted = false
+    val str = readLine()
 
-    while (numberOfCases-- > 0) {
-        val n: Int = readLine()!!.toInt()
-        val array = Array<Int>(n){ readLine()!!.toInt() }
-        /*for (i in 0 until n-1) {
-            array[i] = readLine()!!.toInt()
-        }*/
+    // Read values and convert them to arrayList
+    val intList: ArrayList<Int> =
+            ArrayList(str!!.split(" ").map { it.toInt() })
 
-        performBubbleSortAndPrint(array, n)
-    }
-}
+    // to keep the track of unsorted list
+    var lastUnSorted = intList.size - 1
 
-private fun performBubbleSortAndPrint(array: Array<Int>, n: Int) {
-    for (i in 0 until n-1) {
-        for (j in 0 until n-i-1) {
-            if (array[j] > array[j+1]) {
-                val temp = array[j]
-                array[j] = array[j+1]
-                array[j+1] = temp
+    while (!isSorted) {
+        isSorted = true
+        for (i in 0 until lastUnSorted) {
+            if (intList[i] > intList[i+1]) {
+                swapValues(intList, i, i+1)
+                isSorted = false
             }
         }
+        lastUnSorted--
     }
 
-    for (i in 0 until n) {
+    for (i in intList) {
         print("$i ")
     }
-    println()
 }
+
+fun swapValues(list: ArrayList<Int>, a: Int, b: Int) {
+    val temp = list[a]
+    list[a] = list[b]
+    list[b] = temp
+}
+
+
