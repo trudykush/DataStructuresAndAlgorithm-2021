@@ -1,4 +1,4 @@
-package Feb2021.sorting;
+package Feb2021.sorting.java;
 
 import java.util.Scanner;
 
