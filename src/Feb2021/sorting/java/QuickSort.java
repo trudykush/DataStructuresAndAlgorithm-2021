@@ -16,7 +16,15 @@ public class QuickSort {
             }
 
             performQuickSort(arr, 0, n-1);
+            printResult(arr);
         }
+    }
+
+    private static void printResult(int[] arr) {
+        for (int i = 0; i < arr.length-1; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
     }
 
     private static void performQuickSort(int[] arr, int low, int high) {
@@ -32,7 +40,7 @@ public class QuickSort {
 
         int pivot = arr[high];
         int i = low - 1;
-        for (int j = low; j < high - 1; j++) {
+        for (int j = low; j < high; j++) {
             if(arr[j] < pivot) {
                 i++;
 
