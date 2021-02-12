@@ -7,12 +7,11 @@ fun main(args: Array<String>) {
 
     quickSort(inputList.toIntArray(),
                 0, inputList.size-1)
-    printSortedArray(inputList)
 }
 
-fun printSortedArray(inputList: java.util.ArrayList<Int>) {
-    for (i in 0 until inputList.size) {
-        print("${inputList[i]} ")
+fun printSortedArray(inputList: IntArray) {
+    for (element in inputList) {
+        print("$element ")
     }
     println()
 }
@@ -25,6 +24,7 @@ fun quickSort(toArray: IntArray, low: Int, high: Int) {
         quickSort(toArray, low, pivot-1)
         quickSort(toArray, pivot+1, high)
     }
+    printSortedArray(toArray)
 }
 
 fun partition(toArray: IntArray, low: Int, high: Int): Int {
