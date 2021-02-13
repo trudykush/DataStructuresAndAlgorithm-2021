@@ -23,19 +23,19 @@ public class SortingForBinaryNumberArray {
         int left = 0;
         int right = n-1;
 
-        for (int i = 0; i < n / 2; i++) {
+        while (left < right) {
+            while (arr[left] == 0 && left < right) {
+                left++;
+            }
+            while (arr[right] == 1 && left < right) {
+                right--;
+            }
             if (arr[left] == 1 && arr[right] == 0) {
                 int temp = arr[left];
                 arr[left] = arr[right];
                 arr[right] = temp;
 
                 left++;
-                right--;
-            }
-            if (arr[left] == 0) {
-                left++;
-            }
-            if (arr[right] == 1) {
                 right--;
             }
         }
