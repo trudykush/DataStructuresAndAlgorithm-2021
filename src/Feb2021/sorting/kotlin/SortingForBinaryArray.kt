@@ -30,4 +30,12 @@ fun sortingBinaryArray(toIntArray: IntArray, size: Int) {
         }
     }
 
+    printingResult(toIntArray)
+}
+
+fun printingResult(toIntArray: IntArray) {
+    for (elements in toIntArray) {
+        print("$elements ")
+    }
+    println()
 }
