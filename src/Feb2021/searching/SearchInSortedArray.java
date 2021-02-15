@@ -17,8 +17,28 @@ public class SearchInSortedArray {
             }
 
             int elementToSearch = sc.nextInt();
-         //   searchingSortedArray(arr, n, elementToSearch);
+            int result = searchingSortedArray(arr, n, elementToSearch);
+
         }
     }
 
+    private static int searchingSortedArray(int[] arr, int n, int x) {
+        int low = 0;
+        int high = n-1;
+
+        while (low <= high) {
+            int mid = (low + high) >>> 1;
+
+            if (arr[mid] == x) {
+                return mid;
+            }
+
+            if (arr[mid] < x) {
+                high = mid - 1;
+            } else if (arr[mid] > x) {
+                low = mid + 1;
+            }
+        }
+        return -1;
+    }
 }
