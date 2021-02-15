@@ -30,7 +30,7 @@ public class SearchInSortedArray {
             int mid = (low + high) >>> 1;
 
             if (arr[mid] == x) {
-                return mid;
+                System.out.println("Element Present");
             }
 
             if (arr[mid] < x) {
