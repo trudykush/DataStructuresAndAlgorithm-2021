@@ -1,4 +1,4 @@
-package Feb2021.searching;
+package Feb2021.searching.java;
 
 import java.util.Scanner;
 
