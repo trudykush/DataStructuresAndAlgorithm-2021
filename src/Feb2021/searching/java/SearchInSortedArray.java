@@ -18,7 +18,7 @@ public class SearchInSortedArray {
 
             int elementToSearch = sc.nextInt();
             int result = searchingSortedArray(arr, n, elementToSearch);
-
+            System.out.println("Element present at " + result);
         }
     }
 
