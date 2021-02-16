@@ -34,9 +34,9 @@ public class SearchInSortedArray {
             }
 
             if (arr[mid] < x) {
-                high = mid - 1;
-            } else if (arr[mid] > x) {
                 low = mid + 1;
+            } else if (arr[mid] > x) {
+                high = mid - 1;
             }
         }
         return -1;
