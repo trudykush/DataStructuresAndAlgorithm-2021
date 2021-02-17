@@ -17,7 +17,10 @@ public class SquareRootOfANumber {
     private static int squareRootOrFloorNumber(int inputNumber) {
         int low = 0, high = inputNumber, ans = 0;
         while(low < high) {
-
+            //base case
+            if (inputNumber == 0 || inputNumber == 1) {
+                return inputNumber;
+            }
             int mid = (low + high) >>> 1;
             int midSquare = mid*mid;
             if (midSquare == inputNumber) {
