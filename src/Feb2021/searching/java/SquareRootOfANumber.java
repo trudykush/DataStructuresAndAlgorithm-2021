@@ -10,7 +10,8 @@ public class SquareRootOfANumber {
         while (numberOfCases-- > 0) {
             int inputNumber = sc.nextInt();
 
-            squareRootOrFloorNumber(inputNumber);
+            int result = squareRootOrFloorNumber(inputNumber);
+            System.out.println("The output is: " + result);
         }
     }
 
