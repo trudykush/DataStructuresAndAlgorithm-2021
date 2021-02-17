@@ -10,9 +10,26 @@ public class SquareRootOfANumber {
         while (numberOfCases-- > 0) {
             int inputNumber = sc.nextInt();
 
-       //     squareRootOrFloorNumber(inputNumber);
+            squareRootOrFloorNumber(inputNumber);
         }
     }
 
+    private static int squareRootOrFloorNumber(int inputNumber) {
+        int low = 0, high = inputNumber, ans = 0;
+        while(low < high) {
 
+            int mid = (low + high) >>> 1;
+            int midSquare = mid*mid;
+            if (midSquare == inputNumber) {
+                return mid;
+            }
+            if (midSquare < inputNumber) {
+                low = mid+1;
+                ans = mid;
+            } else {
+                high = mid-1;
+            }
+        }
+        return ans;
+    }
 }
