@@ -19,6 +19,18 @@ public class SmallestPositiveMissingNumber {
 
     private static int missingNumber(int[] arr, int n) {
         int shift = segregate(arr, n);
+
+        int[] resultArr = new int[n - shift];
+        int j = 0;
+        for (int i = shift; i < n; i++) {
+            resultArr[j] = arr[i];
+            j++;
+        }
+        return findingMissingNumber(resultArr, j);
+    }
+
+    private static int findingMissingNumber(int[] arr, int n) {
+
         return -1;
     }
 
