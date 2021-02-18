@@ -31,7 +31,17 @@ public class SmallestPositiveMissingNumber {
 
     private static int findingMissingNumber(int[] arr, int n) {
 
-        return -1;
+        for (int i = 0; i < n; i++) {
+            if (Math.abs(arr[i]) - 1 < n && arr[Math.abs(arr[i]) - 1] > 0) {
+                arr[Math.abs(arr[i]) - 1] = -arr[Math.abs(arr[i]) - 1];
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            if (arr[i] > 0) {
+                return i+1;
+            }
+        }
+        return n+1;
     }
 
     private static int segregate(int[] arr, int n) {
