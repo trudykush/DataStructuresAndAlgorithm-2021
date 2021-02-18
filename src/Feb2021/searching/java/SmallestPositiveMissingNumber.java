@@ -14,6 +14,7 @@ public class SmallestPositiveMissingNumber {
             }
 
             int result = missingNumber(arr, n);
+            System.out.println("Smallest missing number is: " + result);
         }
     }
 
