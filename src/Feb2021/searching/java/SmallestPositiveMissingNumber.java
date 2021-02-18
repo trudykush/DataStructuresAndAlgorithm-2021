@@ -13,8 +13,27 @@ public class SmallestPositiveMissingNumber {
                 arr[i] = sc.nextInt();
             }
 
-         //   int result = missingNumber(arr, n);
+            int result = missingNumber(arr, n);
         }
+    }
+
+    private static int missingNumber(int[] arr, int n) {
+        int shift = segregate(arr, n);
+        return -1;
+    }
+
+    private static int segregate(int[] arr, int n) {
+        int j = 0;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] <= 0) {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+
+                j++;
+            }
+        }
+        return j;
     }
 
 }
