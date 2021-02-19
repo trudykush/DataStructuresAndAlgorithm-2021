@@ -3,7 +3,8 @@ package Feb2021.searching.kotlin
 fun main(args: Array<String>) {
     val input = readLine()
 
-    findingSquareRoot(input!!.toInt())
+    var result = findingSquareRoot(input!!.toInt())
+    print(result)
 }
 
 fun findingSquareRoot(input: Int?): Int {
@@ -17,7 +18,7 @@ fun findingSquareRoot(input: Int?): Int {
         var mid = low + (high - low) / 2
         var midSquare = mid * mid
         if (midSquare == input) {
-            return midSquare
+            return mid
         }
         if (midSquare < input!!) {
             low = mid + 1;
