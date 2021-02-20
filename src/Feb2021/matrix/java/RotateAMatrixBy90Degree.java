@@ -1,4 +1,4 @@
-package Feb2021.matrix;
+package Feb2021.matrix.java;
 
 import java.util.Scanner;
 
