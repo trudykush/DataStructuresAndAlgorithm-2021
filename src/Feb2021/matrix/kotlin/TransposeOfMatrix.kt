@@ -10,14 +10,27 @@ fun main(args: Array<String>) {
     val columns = readLine()!!.toInt()
 
     val input = readLine()
-    var inputNumber: ArrayList<Int> =
+   /* val inputNumber: ArrayList<Int> =
             ArrayList(input!!.split(" ")
-                    .map { it.toInt() })
+                    .map { it.toInt() })*/
 
-    gettingTransposeOfMatrix(inputNumber, rows, columns)
+    val inputMatrix = Array(rows) {IntArray(columns)}
+
+    for (row in inputMatrix.indices) {
+        for (column in inputMatrix[row].indices) {
+            print(inputMatrix[row].contentToString())
+        }
+    }
+
+    //gettingTransposeOfMatrix(inputNumber, rows, columns)
 
 }
 
-fun gettingTransposeOfMatrix(inputNumber: java.util.ArrayList<Int>, rows: Int, columns: Int) {
+fun gettingTransposeOfMatrix(inputNumber: ArrayList<Int>,
+                             rows: Int, columns: Int) {
+    for (i in 0..rows) {
+        for (j in i+1..columns) {
 
+        }
+    }
 }
