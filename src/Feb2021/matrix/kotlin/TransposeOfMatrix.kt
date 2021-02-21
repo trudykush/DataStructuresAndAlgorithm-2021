@@ -9,18 +9,16 @@ fun main(args: Array<String>) {
     // Number of columns
     val columns = readLine()!!.toInt()
 
-    val input = readLine()
-   /* val inputNumber: ArrayList<Int> =
-            ArrayList(input!!.split(" ")
-                    .map { it.toInt() })*/
+    val ogMatrix = arrayOf(intArrayOf(2,3,4), intArrayOf(5,6,7))
 
     val inputMatrix = Array(rows) {IntArray(columns)}
 
-    for (row in inputMatrix.indices) {
-        for (column in inputMatrix[row].indices) {
-            print(inputMatrix[row].contentToString())
+    for (row in 0 until rows - 1) {
+        for (column in 0 until columns - 1) {
+            inputMatrix[column][row] = ogMatrix[row][column]
         }
     }
+
 
     //gettingTransposeOfMatrix(inputNumber, rows, columns)
 
