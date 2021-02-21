@@ -22,6 +22,18 @@ public class NativePatternSearch {
         int m = txtString.length();
         int n = patString.length();
 
-
+        // a loop to slide pat one by one
+        for (int i = 0; i < m - n; i++) {
+            int j;
+            // for current index i, check for pattern match
+            for (j = 0; j < n; j++) {
+                if (txtString.charAt(i+j) != patString.charAt(j)) {
+                    break;
+                }
+            }
+            if (j == n) {
+                System.out.println("Pattern found at index " + i);
+            }
+        }
     }
 }
