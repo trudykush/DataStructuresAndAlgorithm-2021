@@ -10,13 +10,19 @@ public class BinarySubString {
                             new InputStreamReader(System.in));
         int numberOfCases = br.read();
         while (numberOfCases-- > 0) {
-            int inputStr = br.read();
+            String inputStr = br.readLine();
 
             findingAllSubStringEndingWithOne(inputStr);
         }
     }
 
-    private static void findingAllSubStringEndingWithOne(int str) {
-
+    private static int findingAllSubStringEndingWithOne(String str) {
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if(str.charAt(i) == 1) {
+                count++;
+            }
+        }
+        return (count*(count-1))/2;
     }
 }
