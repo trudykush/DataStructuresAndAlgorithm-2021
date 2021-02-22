@@ -12,7 +12,8 @@ public class BinarySubString {
         while (numberOfCases-- > 0) {
             String inputStr = br.readLine();
 
-            findingAllSubStringEndingWithOne(inputStr);
+            int result = findingAllSubStringEndingWithOne(inputStr);
+            System.out.println(result);
         }
     }
 
