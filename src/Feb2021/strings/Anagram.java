@@ -14,17 +14,18 @@ public class Anagram {
             System.out.println("Enter second word: ");
             String sw = sc.next();
 
-            Boolean result = isAnagram(fw, sw);
+            String result = isAnagram(fw, sw);
             System.out.println(result);
         }
     }
 
-    private static Boolean isAnagram(String fw, String sw) {
+    private static String isAnagram(String fw, String sw) {
+        boolean result = true;
         char[] fwChar = fw.toCharArray();
         char[] swChar = sw.toCharArray();
 
         if (fwChar.length != swChar.length) {
-            return false;
+            result = false;
         }
 
         Arrays.sort(fwChar);
@@ -32,10 +33,10 @@ public class Anagram {
 
         for (int i = 0; i < fwChar.length; i++) {
             if (fwChar[i] != swChar[i]) {
-                return false;
+                result = false;
             }
         }
-
-        return true;
+        return result ? "The input strings are Anagram" :
+                "The input strings are not Anagram";
     }
 }
