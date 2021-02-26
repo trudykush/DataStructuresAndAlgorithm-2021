@@ -1,4 +1,4 @@
-package Feb2021.strings;
+package Feb2021.strings.java;
 
 import java.io.BufferedReader;
 import java.io.IOException;
