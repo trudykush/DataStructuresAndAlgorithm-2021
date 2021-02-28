@@ -10,6 +10,13 @@ fun main(args: Array<String>) {
     firstCharArray.sort()
     secondCharArray.sort()
 
+    var result = "Not anagram"
+    if (firstCharArray.size == secondCharArray.size) {
+        //anagram(firstCharArray, secondCharArray)
+        print(result)
+    } else {
+        print(result)
+    }
 
 
 
