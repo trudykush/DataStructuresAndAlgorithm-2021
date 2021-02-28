@@ -12,14 +12,19 @@ fun main(args: Array<String>) {
 
     var result = "Not anagram"
     if (firstCharArray.size == secondCharArray.size) {
-        //anagram(firstCharArray, secondCharArray)
+        anagram(firstCharArray, secondCharArray)
         print(result)
     } else {
         print(result)
     }
 
+}
 
-
-
-
+fun anagram(firstCharArray: CharArray, secondCharArray: CharArray): String {
+    for (elements in firstCharArray.indices) {
+        if (firstCharArray[elements] != secondCharArray[elements]) {
+            return "Not anagram"
+        }
+    }
+    return "Anagram"
 }
