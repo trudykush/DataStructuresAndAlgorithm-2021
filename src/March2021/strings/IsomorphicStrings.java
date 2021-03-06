@@ -12,7 +12,8 @@ public class IsomorphicStrings {
             String firstStr  = sc.next();
             String secondStr = sc.next();
 
-            isIsomorphic(firstStr, secondStr);
+            boolean result = isIsomorphic(firstStr, secondStr);
+            System.out.println(result);
         }
     }
 
