@@ -1,6 +1,7 @@
 package March2021.strings;
 
 import javax.swing.*;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class FirstAppearanceRepeatingChar {
@@ -16,9 +17,20 @@ public class FirstAppearanceRepeatingChar {
 
     private static int getFirstAppearance(String inputStr) {
         int result = -1;
+        char[] input = inputStr.toCharArray();
+        int[] firstIndex = new int[256];
+        Arrays.fill(firstIndex, -1);
 
+        result = Integer.MAX_VALUE;
+        for (int i = 0; i < inputStr.length(); i++) {
+            if (firstIndex[input[i]] == -1) {
+                firstIndex[input[i]] = i;
+            } else {
+                result = Math.min(result, firstIndex[input[i]]);
+            }
+        }
                 
-        return result;
+        return (result == Integer.MAX_VALUE) ? -1 : result;
     }
 
 }
