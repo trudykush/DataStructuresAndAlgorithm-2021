@@ -11,7 +11,9 @@ public class FirstAppearanceRepeatingChar {
         while (numberOfCases-- > 0) {
             String inputStr = sc.next();
             
-            getFirstAppearance(inputStr);
+            int result = getFirstAppearance(inputStr);
+            System.out.println("The first repeated char is "
+                            + inputStr.toCharArray()[result]);
         }
     }
 
