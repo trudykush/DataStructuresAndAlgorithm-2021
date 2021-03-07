@@ -1,4 +1,4 @@
-package March2021.strings;
+package March2021.strings.java;
 
 import java.util.Scanner;
 
