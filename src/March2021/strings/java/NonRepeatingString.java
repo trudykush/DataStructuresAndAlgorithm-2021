@@ -10,18 +10,26 @@ public class NonRepeatingString {
         while (numberOfCases-- > 0) {
             String inputStr = sc.next();
 
-            firstNonRepeatingChar(inputStr);
+            int result = firstNonRepeatingChar(inputStr);
+            if (result >= 0) {
+                System.out.println("Non-repeating string is: " + inputStr.charAt(result));
+            } else {
+                System.out.println("No non-repeating string");
+            }
         }
     }
 
     private static int firstNonRepeatingChar(String inputStr) {
         int[] map = new int[256];
         Arrays.fill(map, 0);
+        int x = 0;
         for (int i = 0; i < inputStr.length(); i++) {
-            if (map[inputStr.charAt(i)] > 1) {
+            map[inputStr.charAt(i)] = map[inputStr.charAt(i)] + 1;
+        }
+
+        for (int i = 0; i < inputStr.length(); i++) {
+            if (map[inputStr.charAt(i)] == 1) {
                 return i;
-            } else {
-                map[inputStr.charAt(i)] = map[inputStr.charAt(i)]++;
             }
         }
         return -1;
