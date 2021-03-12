@@ -3,6 +3,12 @@ package March2021.strings.java;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/*
+* An Isogram is a word in which no letter occurs more than once.
+* Create a method called is_isogram that takes one argument,
+* a word to test if it's an isogram.
+* If the argument supplied is an empty string, return the argument and False:
+* */
 public class IsogramString {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
