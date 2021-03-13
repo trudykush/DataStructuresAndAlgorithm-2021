@@ -15,12 +15,13 @@ public class CountNodesOfLinkedList {
                 tail = tail.next;
             }
             Solution ob = new Solution();
-            System.out.println(ob.getCount(head));
+            System.out.println(ob.getCountIteration(head));
+            System.out.println(ob.getCountRecursion(head));
         }
     }
 
     private static class Solution {
-        public int getCount(Node head) {
+        public int getCountIteration(Node head) {
             Node temp = head;
             int count = 0;
             while (temp != null) {
@@ -28,6 +29,13 @@ public class CountNodesOfLinkedList {
                 temp = temp.next;
             }
             return count;
+        }
+
+        public int getCountRecursion(Node head) {
+            if (head == null) {
+                return 0;
+            }
+            return 1 + getCountRecursion(head.next);
         }
     }
 }
