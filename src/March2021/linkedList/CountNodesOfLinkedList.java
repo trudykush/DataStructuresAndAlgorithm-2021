@@ -32,6 +32,10 @@ public class CountNodesOfLinkedList {
         }
 
         public int getCountRecursion(Node head) {
+            return getCountRec(head);
+        }
+
+        private int getCountRec(Node head) {
             if (head == null) {
                 return 0;
             }
