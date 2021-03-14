@@ -46,16 +46,27 @@ public class LinkedListInsertion {
     private static class Solution {
 
         public Node insertAtBeginning(Node head, int value) {
-            Node temp = new Node(value);
+            Node temp = new Node(value);    // Creating Node
             if (head == null) {
                 return temp;
             }
-            temp.next = head;
+            temp.next = head;               // Updating head
             return temp;
         }
 
         public Node insertAtEnd(Node head, int value) {
-            return null;
+            Node temp = new Node(value);
+            if (head == null) {
+                return temp;
+            } else {
+                Node ptr = head;
+                while (ptr.next != null) {
+                    ptr = ptr.next;
+                }
+                ptr.next = temp;
+                temp.next = null;
+            }
+            return head;
         }
     }
 }
