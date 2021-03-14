@@ -8,11 +8,40 @@ public class LinkedListInsertion {
         int numberOfCases = sc.nextInt();
         while (numberOfCases > 0) {
             int n = sc.nextInt();
+            Node head = null;
             for (int i = 0; i < n; i++) {
                 int value = sc.nextInt();
                 int indicator = sc.nextInt();
+
+                Solution ob = new Solution();
+                if (indicator == 0) {
+                    head = ob.insertAtBegining(head, value);
+                } else {
+                    head = ob.insertAtEnd(head, value);
+                }
             }
             numberOfCases--;
+        }
+    }
+
+    class Node {
+        int data;
+        Node next;
+
+        Node(int x) {
+            data = x;
+            next = null;
+        }
+    }
+
+    private static class Solution {
+
+        public Node insertAtBegining(Node head, int value) {
+            return null;
+        }
+
+        public Node insertAtEnd(Node head, int value) {
+            return null;
         }
     }
 }
