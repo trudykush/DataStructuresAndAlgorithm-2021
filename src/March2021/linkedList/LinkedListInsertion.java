@@ -15,7 +15,7 @@ public class LinkedListInsertion {
 
                 Solution ob = new Solution();
                 if (indicator == 0) {
-                    head = ob.insertAtBegining(head, value);
+                    head = ob.insertAtBeginning(head, value);
                 } else {
                     head = ob.insertAtEnd(head, value);
                 }
@@ -33,7 +33,7 @@ public class LinkedListInsertion {
         System.out.println();
     }
 
-    class Node {
+    static class Node {
         int data;
         Node next;
 
@@ -45,8 +45,13 @@ public class LinkedListInsertion {
 
     private static class Solution {
 
-        public Node insertAtBegining(Node head, int value) {
-            return null;
+        public Node insertAtBeginning(Node head, int value) {
+            Node temp = new Node(value);
+            if (head == null) {
+                return temp;
+            }
+            temp.next = head;
+            return temp;
         }
 
         public Node insertAtEnd(Node head, int value) {
