@@ -20,8 +20,17 @@ public class LinkedListInsertion {
                     head = ob.insertAtEnd(head, value);
                 }
             }
+            printList(head);
             numberOfCases--;
         }
+    }
+
+    private static void printList(Node node) {
+        while(node != null) {
+            System.out.print(node.data + " ");
+            node = node.next;
+        }
+        System.out.println();
     }
 
     class Node {
