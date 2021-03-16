@@ -52,7 +52,39 @@ public class InsertionCircularDoublyLinkedList {
     }
 
     private static class SolutionDLL {
-        public void addNode(Node head, int pos, int data) {
+        public Node addNode(Node head, int pos, int data) {
+            //Declare two pointers
+            Node temp, newNode;
+            int i, count;
+
+            // Create a new node in memory
+            InsertionCircularDoublyLinkedList dLL =
+                    new InsertionCircularDoublyLinkedList();
+            newNode = dLL.newNode(head, data);
+
+            // Point temp to start
+            temp = head;
+
+            // If the list is empty or the position is
+            // not valid, return false
+            if (temp == null) {
+                return head;
+            } else {
+                // Assign the data
+                newNode.data = data;
+
+                // Iterate till the loc
+                for (int j = 0; j < pos - 1; j++) {
+                    temp = temp.next;
+                }
+
+                newNode.next = temp.next;
+                (temp.next).prev = newNode;
+                temp.next = newNode;
+                newNode.prev = temp;
+
+                return head;
+            }
 
         }
     }
