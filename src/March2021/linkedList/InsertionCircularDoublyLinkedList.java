@@ -48,11 +48,37 @@ public class InsertionCircularDoublyLinkedList {
             int data = sc.nextInt();
             SolutionDLL solution = new SolutionDLL();
             solution.addNode(head, pos, data);
+
+            dLL.printList(head);
+            while (head.next != null) {
+                temp = head;
+                head = head.next;
+            }
         }
     }
 
+    void printList(Node head) {
+        Node temp = head;
+        while(temp.next != null)
+        {
+            temp = temp.next;
+        }
+
+        while(temp.prev != null)
+        {
+            temp = temp.prev;
+        }
+
+        while(temp != null)
+        {
+            System.out.print(temp.data+" ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+
     private static class SolutionDLL {
-        public Node addNode(Node head, int pos, int data) {
+        public void addNode(Node head, int pos, int data) {
             //Declare two pointers
             Node temp, newNode;
             int i, count;
@@ -67,14 +93,12 @@ public class InsertionCircularDoublyLinkedList {
 
             // If the list is empty or the position is
             // not valid, return false
-            if (temp == null) {
-                return head;
-            } else {
+            if (temp != null) {
                 // Assign the data
                 newNode.data = data;
 
                 // Iterate till the loc
-                for (int j = 0; j < pos - 1; j++) {
+                for (int j = 1; j < pos - 1; j++) {
                     temp = temp.next;
                 }
 
@@ -83,9 +107,7 @@ public class InsertionCircularDoublyLinkedList {
                 temp.next = newNode;
                 newNode.prev = temp;
 
-                return head;
             }
-
         }
     }
 }
