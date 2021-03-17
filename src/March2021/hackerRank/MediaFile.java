@@ -1,4 +1,4 @@
-package March2021.test;
+package March2021.hackerRank;
 
 import java.util.*;
 
