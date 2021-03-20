@@ -3,7 +3,9 @@ package March2021.strings.java;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class MaximumOccuringChar {
     public static void main(String[] args) throws IOException {
@@ -19,11 +21,28 @@ public class MaximumOccuringChar {
     private static char maxOccuranceChar(String inputStr) {
         int[] map = new int[256];
         Arrays.fill(map, -1);
+        List<Integer> tempList = new ArrayList<>();
         for (int i = 0; i < inputStr.length(); i++) {
             if (map[inputStr.charAt(i)] == -1) {
-                map[inputStr.charAt(i)] = map[inputStr.charAt(i)] + 1;
+                map[inputStr.charAt(i)] =
+                        map[inputStr.charAt(i)] + 1;
+                tempList.add((int)inputStr.charAt(i));
             }
         }
-        return 0;
+
+        if(tempList.size() == 1) {
+            int x = tempList.get(0);
+            return ((char)x);
+        } else if (tempList.size() < 1) {
+            return '-';
+        }
+
+        int smallestChar = Integer.MAX_VALUE;
+        for (int i = 0; i < tempList.size(); i++) {
+            if (tempList.get(i) < smallestChar) {
+                smallestChar = tempList.get(i);
+            }
+        }
+        return (char)smallestChar;
     }
 }
