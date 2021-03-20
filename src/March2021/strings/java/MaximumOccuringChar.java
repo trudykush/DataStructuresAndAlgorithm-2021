@@ -15,6 +15,7 @@ public class MaximumOccuringChar {
         while (n-- > 0) {
             String inputStr = br.readLine();
             char result = maxOccuranceChar(inputStr);
+            System.out.println(result);
         }
     }
 
@@ -24,6 +25,9 @@ public class MaximumOccuringChar {
         List<Integer> tempList = new ArrayList<>();
         for (int i = 0; i < inputStr.length(); i++) {
             if (map[inputStr.charAt(i)] == -1) {
+                map[inputStr.charAt(i)] =
+                        map[inputStr.charAt(i)] + 1;
+            } else if (map[inputStr.charAt(i)] >= 0) {
                 map[inputStr.charAt(i)] =
                         map[inputStr.charAt(i)] + 1;
                 tempList.add((int)inputStr.charAt(i));
