@@ -49,4 +49,29 @@ public class MaximumOccuringChar {
         }
         return (char)smallestChar;
     }
+
+    public char getMaxOccuranceChar(String str) {
+        // create array to keep the count of individual
+        // character and initialize the array as 0
+        int count[] = new int[256];
+
+        // construct char count array from the input str
+        int len = str.length();
+        for (int i = 0; i < len; i++) {
+            count[str.charAt(i)]++;
+        }
+
+        int max = -1;       // Initialize max count
+        char result = ' ';  // Initialize result
+
+        //Traversing through the string and maintaining
+        // the count of each char
+        for (int i = 0; i < len; i++) {
+            if(max < count[str.charAt(i)]) {
+                max = count[str.charAt(i)];
+                result = str.charAt(i);
+            }
+        }
+        return result;
+    }
 }
