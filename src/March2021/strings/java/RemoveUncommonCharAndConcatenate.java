@@ -25,6 +25,11 @@ public class RemoveUncommonCharAndConcatenate {
             }
         }
 
+        for (int i = 0; i < str2.length(); i++) {
+            // TODO check which str is bigger - to prevent Out of bound
+            if (str2.charAt(i) != map[str1.charAt(1)]) {
 
+            }
+        }
     }
 }
