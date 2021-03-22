@@ -1,5 +1,6 @@
 package March2021.strings.java;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class RemoveUncommonCharAndConcatenate {
@@ -16,6 +17,14 @@ public class RemoveUncommonCharAndConcatenate {
 
     private static void removingUncommonChar(String str1,
                                                 String str2) {
+        int[] map = new int[256];
+        Arrays.fill(map, -1);
+        for (int i = 0; i < str1.length(); i++) {
+            if (map[str1.charAt(i)] == -1) {
+                map[str1.charAt(i)] = str1.charAt(i);
+            }
+        }
+
 
     }
 }
