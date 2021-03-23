@@ -17,7 +17,7 @@ public class RemoveUncommonCharAndConcatenate {
                             removingUncommonChar(str1, str2);
             for (char i :
                     result) {
-                System.out.println(i);
+                System.out.print(i);
             }
         }
     }
@@ -35,7 +35,7 @@ public class RemoveUncommonCharAndConcatenate {
         List<Character> result = new ArrayList<>();
         for (int i = 0; i < str2.length(); i++) {
             // TODO check which str is bigger - to prevent Out of bound
-            if (str2.charAt(i) != map[str1.charAt(i)]) {
+            if (map[str2.charAt(i)] < 0) {
                 result.add(str2.charAt(i));
             }
         }
