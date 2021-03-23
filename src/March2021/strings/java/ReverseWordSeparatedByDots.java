@@ -13,6 +13,9 @@ public class ReverseWordSeparatedByDots {
             Collections.reverse(Arrays.asList(separatedString));
             System.out.println(Arrays.toString(separatedString));
 
+            for (int i = 0; i < separatedString.length; i++) {
+                System.out.print(separatedString[i] + ".");
+            }
         }
      }
 }
