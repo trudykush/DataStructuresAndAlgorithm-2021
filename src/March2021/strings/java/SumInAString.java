@@ -7,7 +7,8 @@ public class SumInAString {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
 
-        findSum(str);
+        int result = findSum(str);
+        System.out.println(result);
     }
 
     private static int findSum(String str) {
@@ -28,6 +29,7 @@ public class SumInAString {
 
                 // reset temp string to empty
                 temp.setLength(0);
+                temp.append("0");
             }
         }
         return sum + Integer.parseInt(String.valueOf(temp));
