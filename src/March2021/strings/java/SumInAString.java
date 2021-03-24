@@ -12,9 +12,24 @@ public class SumInAString {
 
     private static int findSum(String str) {
         // A temporary String
-        String temp = "0";
+        StringBuilder temp = new StringBuilder("0");
 
-        // holds
-        return -1;
+        // holds sum of all numbers present in the string
+        int sum = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            // if current char is a digit
+            if (Character.isDigit(ch)) {
+                temp.append(ch);
+            } else {    // if current char is an alphabet
+                sum += Integer.parseInt(String.valueOf(temp));
+
+                // reset temp string to empty
+                temp.setLength(0);
+            }
+        }
+        return sum + Integer.parseInt(String.valueOf(temp));
     }
 }
