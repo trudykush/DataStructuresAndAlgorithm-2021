@@ -12,7 +12,7 @@ public class PangramCheck {
             String str = sc.next();
 
             boolean result = checkingIfPangram(str);
-            // Printing result
+            // Printing result in here
             if (result) {
                 System.out.println("The given string is pangram");
             } else {
