@@ -9,7 +9,8 @@ public class PangramCheck {
         while (numberOfCases-- > 0) {
             String str = sc.next();
 
-            checkingIfPangram(str);
+            boolean result = checkingIfPangram(str);
+            System.out.println(result);
         }
     }
 
