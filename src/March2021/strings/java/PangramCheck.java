@@ -27,5 +27,11 @@ public class PangramCheck {
             mark[index] = true;
         }
 
+        for (int i = 0; i < 25; i++) {
+            if (!mark[i]) {
+                return false;
+            }
+        }
+        return true;
     }
 }
