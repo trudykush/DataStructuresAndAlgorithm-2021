@@ -33,7 +33,19 @@ public class MinimumIndexCharacter {
             }
         }
 
+        for (int i = 0; i < n; i++) {
+            if(hm.containsKey(pat.charAt(i)) &&
+                    hm.get(pat.charAt(i)) < minIndex) {
+                minIndex = hm.get(pat.charAt(i));
+            }
+        }
 
+        if (minIndex != Integer.MAX_VALUE) {
+            System.out.println("Minimum Index Char = " +
+                        str.charAt(minIndex));
+        } else {
+            System.out.println("No Character present");
+        }
     }
 
     // Bug in this
