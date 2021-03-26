@@ -1,6 +1,7 @@
 package March2021.strings.java;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class MinimumIndexCharacter {
@@ -21,6 +22,21 @@ public class MinimumIndexCharacter {
         }
     }
 
+    static void printMinIndexChar(String str, String pat) {
+        HashMap<Character, Integer> hm = new HashMap<>();
+        int minIndex = Integer.MAX_VALUE;
+        int m = str.length();
+        int n = pat.length();
+        for (int i = 0; i < m; i++) {
+            if (!hm.containsKey(str.charAt(i))) {
+                hm.put(str.charAt(i), i);
+            }
+        }
+
+
+    }
+
+    // Bug in this
     private static char findingMinIndexChar(String inputStr, String patternStr) {
         int[] inputStrChar = new int[inputStr.length()];
         int[] patStrChar = new int[patternStr.length()];
@@ -29,8 +45,10 @@ public class MinimumIndexCharacter {
         Arrays.fill(patStrChar, -1);
 
         for (int i = 0; i < patternStr.length(); i++) {
-            if (patStrChar[patternStr.charAt(i)] == inputStr.charAt(i)) {
-                inputStrChar[i] = i;
+            if (inputStr.length() > i) {
+                if (patternStr.charAt(i) == inputStr.charAt(i)) {
+                    inputStrChar[i] = i;
+                }
             }
         }
 
