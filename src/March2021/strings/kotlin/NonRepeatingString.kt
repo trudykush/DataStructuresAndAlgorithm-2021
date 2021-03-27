@@ -15,6 +15,7 @@ fun main(args: Array<String>) {
         map[inputChar[index].toInt()] = map[inputChar[index].toInt()] + 1
     }
 
+    // for loop for finishing string
     for (i in inputChar.indices) {
         if (map[inputChar[i].toInt()] == 0) {
             print("The first non-repeating char is: ${inputChar[i]}")
