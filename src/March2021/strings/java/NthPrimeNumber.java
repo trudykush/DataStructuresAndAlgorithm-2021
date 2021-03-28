@@ -12,6 +12,8 @@ public class NthPrimeNumber {
                     "find the prime number at that position");
             int input = sc.nextInt();
             String result = nthPrimeNumberFinder(input);
+            System.out.println("Prime number at position: " +
+                    input + " is: " + result);
         }
     }
 
