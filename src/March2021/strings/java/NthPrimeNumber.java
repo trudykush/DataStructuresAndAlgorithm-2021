@@ -29,12 +29,16 @@ public class NthPrimeNumber {
                     break;
                 case 3:
                     num.append('5');
-                    break;;
+                    break;
                 case 0:
                     num.append('7');
                     break;
             }
-
+            if (input % 4 == 0) {
+                input--;
+            }
+            input = input / 4;
         }
+        return new StringBuilder(num).reverse().toString();
     }
 }
