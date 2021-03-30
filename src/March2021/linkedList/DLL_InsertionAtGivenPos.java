@@ -23,6 +23,18 @@ public class DLL_InsertionAtGivenPos {
                 n.next = null;
                 temp.next = n;
                 n.prev = temp;
+            } else {
+                // storing next node to current node in link
+                // part(next) of new node.
+                n.next = temp.next;
+                // storing new node in link part(next) of current node
+                temp.next = n;
+                // storing the new node in previous link(prev) of the node
+                // which was next to current node initially
+                temp.next.prev = n;
+                // store the current node in previous link part(prev)
+                // of new node
+                n.prev = temp;
             }
         }
     }
