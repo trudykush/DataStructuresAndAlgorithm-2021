@@ -5,12 +5,29 @@ import java.util.Scanner;
 public class DLL_InsertionAtGivenPos {
 
     private static class DLL {
+        // fun to insert a new node at a given position in doubly linked list
         public void addNode(Node head, int pos, int data) {
+            Node temp = head;
+            // using a pointer to traverse the linked list till given position.
+            while (pos != 0) {
+                temp = temp.next;
+                pos--;
+            }
+            // creating and storing the new node with data in a pointer
+            Node n = new Node(data);
 
+            // if the node next to node at given position is null,
+            // we make the next as new_node and new_node's prev link as
+            // this current node.
+            if (temp.next == null) {
+                n.next = null;
+                temp.next = n;
+                n.prev = temp;
+            }
         }
     }
 
-    class Node {
+    static class Node {
         int data;
         Node next;
         Node prev;
