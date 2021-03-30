@@ -12,6 +12,18 @@ public class DLL_InsertionAtGivenPos {
         }
     }
 
-
+    class DLinkedList {
+        Node newNode(Node head, int data) {
+            Node n = new Node(data);
+            if (head == null) {
+                head = n;
+                return head;
+            }
+            head.next = n;
+            n.prev = head;
+            head = n;
+            return head;
+        }
+    }
 
 }
