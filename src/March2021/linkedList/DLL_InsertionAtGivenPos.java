@@ -24,6 +24,22 @@ public class DLL_InsertionAtGivenPos {
             head = n;
             return head;
         }
+
+        void printList(Node node) {
+            Node temp = node;
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            while (temp.prev != null) {
+                temp = temp.prev;
+            }
+
+            while (temp != null) {
+                System.out.print(temp.data + " ");
+                temp = temp.next;
+            }
+            System.out.println();
+        }
     }
 
 }
