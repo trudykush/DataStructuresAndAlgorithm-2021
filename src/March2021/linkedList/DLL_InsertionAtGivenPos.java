@@ -4,6 +4,12 @@ import java.util.Scanner;
 
 public class DLL_InsertionAtGivenPos {
 
+    private static class DLL {
+        public void addNode(Node head, int pos, int data) {
+
+        }
+    }
+
     class Node {
         int data;
         Node next;
@@ -65,6 +71,15 @@ public class DLL_InsertionAtGivenPos {
             int pos = sc.nextInt();
             System.out.println("Enter the element: ");
             int data = sc.nextInt();
+
+            DLL helperDLL = new DLL();
+            helperDLL.addNode(head, pos, data);
+
+            dll.printList(head);
+            while (head.next != null) {
+                temp = head;
+                head = head.next;
+            }
         }
     }
 
