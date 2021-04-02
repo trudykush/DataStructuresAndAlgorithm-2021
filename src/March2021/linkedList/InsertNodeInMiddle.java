@@ -40,19 +40,31 @@ public class InsertNodeInMiddle {
         }
     }
 
+    // function to insert node at the middle of
+    // the linked list
     private static void insertAtMid(int x) {
+        // if list is empty
         if (head == null) {
             head = new Node(x);
         } else {
+            // get a new node
             Node newNode = new Node(x);
+
+            // assign values to the slow
+            // and fast pointers
             Node slow = head;
             Node fast = head.next;
 
             while (fast != null && fast.next != null) {
+                // move slow pointer to next node
                 slow = slow.next;
+
+                // move fast pointer two nodes at a time
                 fast = fast.next.next;
             }
 
+            // insert the 'newNode' and adjust
+            // the required links
             newNode.next = slow.next;
             slow.next = newNode;
         }
