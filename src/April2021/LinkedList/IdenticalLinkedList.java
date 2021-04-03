@@ -32,6 +32,21 @@ public class IdenticalLinkedList {
                 tail2.next = n;
                 tail2 = tail2.next;
             }
+
+            Solution solutionObj = new Solution();
+            if (solutionObj.isIdentical(head1, head2)) {
+                System.out.println("Identical");
+            } else {
+                System.out.println("Not Identical");
+            }
+        }
+
+
+    }
+
+    private static class Solution {
+        public boolean isIdentical(Node head1, Node head2) {
+            return false;
         }
     }
 }
