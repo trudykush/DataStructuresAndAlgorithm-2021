@@ -53,6 +53,7 @@ public class IdenticalLinkedList {
 
     private static class Solution {
         public boolean isIdentical(Node head1, Node head2) {
+
             while (head1 != null && head2 != null) {
                 if (head1.data != head2.data) {
                     return false;
@@ -62,6 +63,18 @@ public class IdenticalLinkedList {
             }
             return (head1 == null && head2 == null);
         }
+    }
+
+    public boolean isIdenticalRecursive(Node head1, Node head2) {
+        if (head1 == null && head2 == null) {
+            return true;
+        }
+
+        if (head1 != null && head2 != null) {
+            return (head1.data == head2.data) && isIdenticalRecursive(head1.next, head2.next);
+        }
+
+        return false;
     }
 }
 
