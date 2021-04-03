@@ -53,27 +53,41 @@ public class IdenticalLinkedList {
 
     private static class Solution {
         public boolean isIdentical(Node head1, Node head2) {
-
+            // checking is any of the list is not empty
             while (head1 != null && head2 != null) {
                 if (head1.data != head2.data) {
                     return false;
                 }
+                /*
+                * if we reach here, then head1 and head2 are not null
+                * and their data is same, so move to next nodes in both lists
+                * */
                 head1 = head1.next;
                 head2 = head2.next;
             }
+            /*
+            * if linked lists are identical, then 'head1' and 'head2'
+            * must be null at this point
+            * */
             return (head1 == null && head2 == null);
         }
     }
 
     public boolean isIdenticalRecursive(Node head1, Node head2) {
+        // if both list are empty
         if (head1 == null && head2 == null) {
             return true;
         }
 
+        // if both lists are not empty, then data of
+        // current nodes much watch, and same should
+        // be recursively true for rest of the nodes.
         if (head1 != null && head2 != null) {
             return (head1.data == head2.data) && isIdenticalRecursive(head1.next, head2.next);
         }
 
+        // if we reach here, then one of the lists
+        // is empty and other is not
         return false;
     }
 }
