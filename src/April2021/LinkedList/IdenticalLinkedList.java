@@ -40,9 +40,16 @@ public class IdenticalLinkedList {
                 System.out.println("Not Identical");
             }
         }
-
-
     }
+
+    public static void show(Node head) {
+        while (head != null) {
+            System.out.print(head.data + " ");
+            head = head.next;
+        }
+        System.out.println();
+    }
+
 
     private static class Solution {
         public boolean isIdentical(Node head1, Node head2) {
