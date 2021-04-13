@@ -13,7 +13,7 @@ public class MaxLenSubArrayOfValueK {
         int[] arr2 = {2, -7, 8, 4, 6, 1};
         int k2 = 5;
 
-        int result = findingSubArray2(arr2, k2);
+        int result = findingSubArray4(arr2, k2);
         System.out.println(result);
     }
 
@@ -49,6 +49,70 @@ public class MaxLenSubArrayOfValueK {
                 }
                 if (res > maxLen) {
                     maxLen = res;
+                }
+            }
+        }
+
+        return maxLen;
+    }
+
+    public int findingSubArray3(int[] arr, int k) {
+
+        int res = 0;
+        HashMap<Integer, Integer> prevSum = new HashMap<>();
+        int maxLen = Integer.MIN_VALUE;
+
+        int currSum = 0;
+        int n = arr.length;
+
+        for(int i = 0; i < n; i++) {
+            currSum += arr[i];
+
+            if (currSum == k) {
+                res = i + 1;
+            }
+
+            if (prevSum.containsKey(currSum - k)) {
+                res += prevSum.get(currSum - k);
+            }
+
+            Integer count = prevSum.get(currSum);
+            if (count == null) {
+                prevSum.put(currSum, 1);
+            } else {
+                prevSum.put(currSum, count+1);
+            }
+
+            if (res > maxLen) {
+                maxLen = res;
+            }
+        }
+
+        return res;
+    }
+
+    public static int findingSubArray4(int[] arr, int k) {
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int maxLen = 0;
+
+        int currSum = 0;
+        int n = arr.length;
+
+        for(int i = 0; i < n; i++) {
+            currSum += arr[i];
+
+            if (currSum == k) {
+                maxLen = i + 1;
+            }
+
+            if (!map.containsKey(currSum)) {
+                map.put(currSum, i);
+            }
+
+            if (map.containsKey(currSum - k)) {
+                if (maxLen < (i - map.get(currSum - k))) {
+                    maxLen = i - map.get(currSum - k);
                 }
             }
         }
