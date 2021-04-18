@@ -1,5 +1,7 @@
 package April2021.LinkedList;
 
+import java.util.Scanner;
+
 public class DeleteWithoutHeaderPointer {
     static Node head;
     static class Node {
@@ -17,4 +19,12 @@ public class DeleteWithoutHeaderPointer {
             node = node.next;
         }
     }
+
+    void deleteHeadNode(Node head) {
+        Node temp = head.next;
+        head.data = temp.data;
+        head.next = temp.next;
+        System.gc();
+    }
+
 }
