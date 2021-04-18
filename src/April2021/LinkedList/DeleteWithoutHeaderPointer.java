@@ -32,9 +32,9 @@ public class DeleteWithoutHeaderPointer {
         int numberOfCases = sc.nextInt();
         while (numberOfCases-- > 0) {
             int n = sc.nextInt();
-            Node head = new Node(sc.nextInt());
+            head = new Node(sc.nextInt());
             Node tail = head;
-            for (int i = 0; i < n; i++) {
+            for (int i = 0; i < n-1; i++) {
                 tail.next = new Node(sc.nextInt());
                 tail = tail.next;
             }
@@ -43,6 +43,7 @@ public class DeleteWithoutHeaderPointer {
         printList(head);
 
         deleteHeadNode(head);
+        System.out.println();
 
         printList(head);
     }
