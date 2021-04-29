@@ -14,10 +14,10 @@ public class DeleteNodeWithoutHeadPointer {
         }
     }
 
-    static void display() {
+    static void display(Node head) {
         Node temp = head;
         while (temp != null) {
-            System.out.println(temp.data + " ");
+            System.out.print(temp.data + " -> ");
             temp = temp.next;
         }
     }
@@ -27,11 +27,13 @@ public class DeleteNodeWithoutHeadPointer {
         int numberOfCases = sc.nextInt();
         while (numberOfCases-- > 0) {
             int n = sc.nextInt();
-            Node head = null;
+            Node head = new Node(sc.nextInt());
+            Node tail = head;
             for (int i = 0; i < n; i++) {
-                int value = sc.nextInt();
+                tail.next = new Node(sc.nextInt());
+                tail = tail.next;
             }
-            display();
+            display(head);
         }
     }
 }
