@@ -34,6 +34,25 @@ public class DeleteNodeWithoutHeadPointer {
                 tail = tail.next;
             }
             display(head);
+            Node nodeToBeDeleted = new Node(sc.nextInt());
+            head = deleteNode(head, nodeToBeDeleted);
+
+            display(head);
+        }
+    }
+
+    private static Node deleteNode(Node head, Node nodeToBeDeleted) {
+        if (nodeToBeDeleted == null) {
+            return null;
+        } else {
+            if (nodeToBeDeleted.next == null) {
+                System.out.println("Last Node can't be freed");
+                return null;
+            }
+
+            nodeToBeDeleted.data = nodeToBeDeleted.next.data;
+            nodeToBeDeleted.next = nodeToBeDeleted.next.next;
+            return head;
         }
     }
 }
