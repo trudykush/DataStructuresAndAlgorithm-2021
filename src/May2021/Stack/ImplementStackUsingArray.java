@@ -58,5 +58,15 @@ public class ImplementStackUsingArray {
                 return x;
             }
         }
+
+        public int peek() {
+            if (top < 0) {
+                System.out.println("Stack underflow");
+                return 0;
+            } else {
+                int x = arr[top];
+                return x;
+            }
+        }
     }
 }
