@@ -20,9 +20,9 @@ public class ImplementStackUsingLinkedList {
                 queryType = Integer.parseInt(read.readLine());
                 if (queryType == 1) {
                     int a = Integer.parseInt(str[k++]);
-//                    obj.push(a);
+                    obj.push(a);
                 } else if (queryType == 2) {
-//                    System.out.println(obj.pop() + " ");
+                    System.out.println(obj.pop() + " ");
                 }
                 Q--;
             }
@@ -32,5 +32,13 @@ public class ImplementStackUsingLinkedList {
     }
 
     private static class MyStackLinkedList {
+
+        public void push(int a) {
+
+        }
+
+        public boolean pop() {
+            return false;
+        }
     }
 }
