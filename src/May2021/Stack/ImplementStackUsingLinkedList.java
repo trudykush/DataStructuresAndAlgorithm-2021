@@ -55,8 +55,25 @@ public class ImplementStackUsingLinkedList {
             top = temp;
         }
 
-        public boolean pop() {
-            return false;
+        public int peek() {
+            if (isEmpty()) {
+                return top.data;
+            } else {
+                System.out.println("Stack is Empty");
+                return -1;
+            }
+        }
+
+        public void pop() {
+            if (top == null) {
+                System.out.println("Stack UnderFlow");
+                return;
+            }
+            top = (top).link;
+        }
+
+        public boolean isEmpty() {
+            return top == null;
         }
     }
 }
