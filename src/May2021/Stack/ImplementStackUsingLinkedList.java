@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import static java.lang.System.exit;
+
 public class ImplementStackUsingLinkedList {
 
     public static void main(String[] args) throws IOException {
@@ -74,6 +76,21 @@ public class ImplementStackUsingLinkedList {
 
         public boolean isEmpty() {
             return top == null;
+        }
+
+        public void display() {
+
+            if (top == null) {
+                System.out.println("Stack UnderFlow");
+                exit();
+            }
+            else {
+                Node temp = top;
+                while (temp != null) {
+                    System.out.printf("%d->", temp.data);
+                    temp = temp.link;
+                }
+            }
         }
     }
 }
