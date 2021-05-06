@@ -33,8 +33,26 @@ public class ImplementStackUsingLinkedList {
 
     private static class MyStackLinkedList {
 
-        public void push(int a) {
+        private class Node {
+            int data;
+            Node link;
+        }
 
+        Node top;
+
+        MyStackLinkedList() {
+            this.top = null;
+        }
+
+        public void push(int a) {
+            Node temp = new Node();
+            if (temp == null) {
+                System.out.println("Heap OverFlow");
+                return;
+            }
+            temp.data = a;
+            temp.link = top;
+            top = temp;
         }
 
         public boolean pop() {
