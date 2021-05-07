@@ -24,7 +24,7 @@ public class ImplementStackUsingLinkedList {
                     int a = Integer.parseInt(str[k++]);
                     obj.push(a);
                 } else if (queryType == 2) {
-                    System.out.println(obj.pop() + " ");
+                    obj.pop();
                 }
                 Q--;
             }
@@ -37,7 +37,7 @@ public class ImplementStackUsingLinkedList {
 
         private class Node {
             int data;
-            Node link;
+            Node next;
         }
 
         Node top;
@@ -53,7 +53,7 @@ public class ImplementStackUsingLinkedList {
                 return;
             }
             temp.data = a;
-            temp.link = top;
+            temp.next = top;
             top = temp;
         }
 
@@ -71,7 +71,7 @@ public class ImplementStackUsingLinkedList {
                 System.out.println("Stack UnderFlow");
                 return;
             }
-            top = (top).link;
+            top = (top).next;
         }
 
         public boolean isEmpty() {
@@ -82,13 +82,13 @@ public class ImplementStackUsingLinkedList {
 
             if (top == null) {
                 System.out.println("Stack UnderFlow");
-                exit();
+                exit(1);
             }
             else {
                 Node temp = top;
                 while (temp != null) {
                     System.out.printf("%d->", temp.data);
-                    temp = temp.link;
+                    temp = temp.next;
                 }
             }
         }
