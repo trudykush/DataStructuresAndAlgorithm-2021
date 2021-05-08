@@ -35,6 +35,7 @@ public class ImplementStackUsingLinkedList {
 
     private static class MyStackLinkedList {
 
+        // A linked list node
         private class Node {
             int data;
             Node next;
@@ -46,6 +47,7 @@ public class ImplementStackUsingLinkedList {
             this.top = null;
         }
 
+        // to add element in the stack
         public void push(int a) {
             Node temp = new Node();
             if (temp == null) {
