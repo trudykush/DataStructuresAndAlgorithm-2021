@@ -49,17 +49,26 @@ public class ImplementStackUsingLinkedList {
 
         // to add element in the stack
         public void push(int a) {
+            // create a new node temp and allocate memory
             Node temp = new Node();
+
+            // check if stack (heap) is full.
+            // Then inserting an element would lead to stack overflow
             if (temp == null) {
                 System.out.println("Heap OverFlow");
                 return;
             }
+            // initialize data into temp data field
             temp.data = a;
+            //put top ref into temp link
             temp.next = top;
+            // update top ref
             top = temp;
         }
 
+        // utility function to return top element in a stack
         public int peek() {
+            // check for empty stack
             if (isEmpty()) {
                 return top.data;
             } else {
@@ -67,6 +76,7 @@ public class ImplementStackUsingLinkedList {
                 return -1;
             }
         }
+
 
         public void pop() {
             if (top == null) {
