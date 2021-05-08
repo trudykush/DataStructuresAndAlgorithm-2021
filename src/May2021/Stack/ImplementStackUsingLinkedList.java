@@ -77,12 +77,14 @@ public class ImplementStackUsingLinkedList {
             }
         }
 
-
+        // utility function to pop top element from the stack
         public void pop() {
+            // check for stack underflow
             if (top == null) {
                 System.out.println("Stack UnderFlow");
                 return;
             }
+            // update the top pointer to point to the next node
             top = (top).next;
         }
 
