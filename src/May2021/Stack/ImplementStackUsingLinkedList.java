@@ -23,8 +23,10 @@ public class ImplementStackUsingLinkedList {
                 if (queryType == 1) {
                     int a = Integer.parseInt(str[k++]);
                     obj.push(a);
+                    obj.display();
                 } else if (queryType == 2) {
                     obj.pop();
+                    obj.display();
                 }
                 Q--;
             }
@@ -78,14 +80,25 @@ public class ImplementStackUsingLinkedList {
         }
 
         // utility function to pop top element from the stack
-        public void pop() {
-            // check for stack underflow
-            if (top == null) {
-                System.out.println("Stack UnderFlow");
-                return;
+        public int pop() {
+            Node temp = top;
+
+            //if node at temp pointer is null, the stack is empty so we return -1.
+            if (temp == null)
+            {
+                System.out.println("Stack Underflow");
+                return -1;
             }
-            // update the top pointer to point to the next node
-            top = (top).next;
+            else
+            {
+                //storing the data at top node and deleting that node.
+                temp = temp.next;
+                int r = top.data;
+                top = temp;
+
+                //returning the data.
+                return r;
+            }
         }
 
         public boolean isEmpty() {
