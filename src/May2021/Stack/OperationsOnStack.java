@@ -3,6 +3,7 @@ package May2021.Stack;
 import java.util.Scanner;
 import java.util.Stack;
 
+
 public class OperationsOnStack {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

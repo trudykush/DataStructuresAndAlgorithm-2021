@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+
 public class MaximumOccuringChar {
     public static void main(String[] args) throws IOException {
         BufferedReader br =
