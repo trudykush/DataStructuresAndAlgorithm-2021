@@ -20,6 +20,21 @@ public class OperationsOnStack {
                     int x = sc.nextInt();
                     obj.insert(st, x);
                 }
+                if (ch == 'r') {
+                    obj.remove(st);
+                }
+                if (ch == 'h') {
+                    obj.headOf_Stack(st);
+                }
+                if (ch == 'f') {
+                    int x = sc.nextInt();
+
+                    if (obj.find(st,x)) {
+                        System.out.println("Yes");
+                    } else {
+                        System.out.println("No");
+                    }
+                }
             }
         }
     }
@@ -27,6 +42,18 @@ public class OperationsOnStack {
     private static class HelperStack {
         public void insert(Stack<Integer> st, int x) {
 
+        }
+
+        public void remove(Stack<Integer> st) {
+
+        }
+
+        public void headOf_Stack(Stack<Integer> st) {
+
+        }
+
+        public boolean find(Stack<Integer> st, int x) {
+            return false;
         }
     }
 }
