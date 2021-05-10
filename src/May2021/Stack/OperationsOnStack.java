@@ -41,19 +41,24 @@ public class OperationsOnStack {
 
     private static class HelperStack {
         public void insert(Stack<Integer> st, int x) {
-
+            st.push(x);
         }
 
         public void remove(Stack<Integer> st) {
-
+            int x = st.pop();
         }
 
         public void headOf_Stack(Stack<Integer> st) {
-
+            int x = st.peek();
+            System.out.println(x + " ");
         }
 
         public boolean find(Stack<Integer> st, int x) {
-            return false;
+            if (st.search(x) >= 0) {
+                return true;
+            } else {
+                return false;
+            }
         }
     }
 }
