@@ -6,6 +6,7 @@ public class MaxInArray {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 45, 8};
 
+        // Java 8 Way
         int max = Arrays.stream(arr).max().getAsInt();
 
     }
