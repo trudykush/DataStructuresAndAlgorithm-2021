@@ -22,7 +22,12 @@ public class VacationProblem {
         String y = getLastSunday(Calendar.MAY, 2014);
         System.out.println(y);
 
-        Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(x);
+        Date date1= null;
+        try {
+            date1 = new SimpleDateFormat("dd/MM/yyyy").parse(x);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         Date date2=new SimpleDateFormat("dd/MM/yyyy").parse(y);
 
         int result = option1(date1, date2);
@@ -104,5 +109,11 @@ public class VacationProblem {
 //        return cal.getTime();
     }
 
+    private int getMonthNumber(String month) {
+        switch (month) {
+            //case Janu
+        }
+        return -1;
+    }
 
 }
