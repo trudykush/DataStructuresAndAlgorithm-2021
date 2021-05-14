@@ -16,10 +16,10 @@ public class InterviewPart5 {
 
         for (int i = 0; i < n; i++) {   // outwards
             for (int j = 0; j < n; j++) {   //inwards
-                int x = knows(i, j);
+                //int x = knows(i, j);
 
-                outwards[i] += x;
-                inwards[j] += x;
+                /*outwards[i] += x;
+                inwards[j] += x;*/
             }
         }
 
@@ -44,11 +44,11 @@ public class InterviewPart5 {
             int a = st.pop();
             int b = st.pop();
 
-            if (knows(a, b)) {
+            /*if (knows(a, b)) {
                 st.push(b);
             } else {
                 st.push(a);
-            }
+            }*/
         }
 
         if (st.isEmpty()) {
@@ -57,11 +57,11 @@ public class InterviewPart5 {
 
         c = st.pop();
 
-        for (int i = 0; i < n; i++) {
+        /*for (int i = 0; i < n; i++) {
             if (i != c && (knows(c,i) || knows(i,c))) {
                 return -1;
             }
-        }
+        }*/
         return c;
     }
 }
