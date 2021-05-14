@@ -20,7 +20,11 @@ public class VacationProblem {
         System.out.println(x);
 
         String y = getLastSunday(Calendar.MAY, 2014);
-        System.out.println(y);
+        System.out.println("rrrrrrrrrrr " + y);
+
+        Date tradeDate = new SimpleDateFormat("yyyyMMdd", Locale.ENGLISH).parse(y);
+        String krwtrDate = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).format(tradeDate);
+        System.out.println("gsrgsrgdr " + krwtrDate);
 
         Date date1= null;
         try {
@@ -91,6 +95,7 @@ public class VacationProblem {
         cacheCalendar.set(Calendar.MONTH, month);
         cacheCalendar.set(Calendar.YEAR, year);
         int monthAsCountOne = month + 1;
+        System.out.println("Ypo yo " + Calendar.JANUARY);
         String x = cacheCalendar.get(Calendar.DATE) +"/"+ monthAsCountOne +"/"+ cacheCalendar.get(Calendar.YEAR);
         System.out.println(x);
         return x;
@@ -99,7 +104,7 @@ public class VacationProblem {
 
     public static String getLastSunday(int month, int year) {
         Calendar cal = Calendar.getInstance();
-        cal.set(year, Calendar.JUNE, 1);
+        cal.set(year, month, 1);
         int dayOftheWeek = cal.get(Calendar.DAY_OF_WEEK);
         int val = dayOftheWeek == Calendar.SUNDAY ? -7: -(dayOftheWeek-1);
         cal.add(Calendar.DAY_OF_MONTH, val);
@@ -117,3 +122,16 @@ public class VacationProblem {
     }
 
 }
+/*
+*
+SELECT plays.id, plays.title, coalesce(reserved_tickets, 0)
+FROM (
+    SELECT play_id, SUM(reservations.number_of_tickets) AS reserved_tickets
+    FROM reservations
+    GROUP BY play_id
+) reservations
+RIGHT JOIN plays
+ON reservations.play_id = plays.id
+ORDER BY reserved_tickets DESC NULLS LAST,
+CASE WHEN reserved_tickets = reserved_tickets THEN play_id END ASC;
+* */
