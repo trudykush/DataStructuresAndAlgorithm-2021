@@ -58,7 +58,7 @@ public class InterviewPart5 {
         c = st.pop();
 
         /*for (int i = 0; i < n; i++) {
-            if (i != c && (knows(c,i) || knows(i,c))) {
+            if (i != c && (knows(c,i) || !knows(i,c))) {
                 return -1;
             }
         }*/
