@@ -1,4 +1,4 @@
-package May2021.test;
+package May2021.codingChallenges;
 
 public class InterviewPart4 {
 

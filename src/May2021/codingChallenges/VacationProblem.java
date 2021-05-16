@@ -1,10 +1,7 @@
-package May2021.test;
-
-import sun.util.calendar.CalendarUtils;
+package May2021.codingChallenges;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
