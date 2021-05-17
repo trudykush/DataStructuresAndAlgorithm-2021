@@ -3,7 +3,6 @@ package May2021.String;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class RemovingConsecutiveDuplicates {
@@ -19,6 +18,7 @@ public class RemovingConsecutiveDuplicates {
     private static String removeConseDuplicates(char[] str) {
 
         int n = str.length;
+        // if string is empty or single character
         if (n < 2) {
             return String.valueOf(str[0]);
         }
