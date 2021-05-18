@@ -71,7 +71,7 @@ public class ImplementStackUsingLinkedList {
         // utility function to return top element in a stack
         public int peek() {
             // check for empty stack
-            if (isEmpty()) {
+            if (!isEmpty()) {
                 return top.data;
             } else {
                 System.out.println("Stack is Empty");
@@ -84,13 +84,10 @@ public class ImplementStackUsingLinkedList {
             Node temp = top;
 
             //if node at temp pointer is null, the stack is empty so we return -1.
-            if (temp == null)
-            {
+            if (temp == null) {
                 System.out.println("Stack Underflow");
                 return -1;
-            }
-            else
-            {
+            } else {
                 //storing the data at top node and deleting that node.
                 temp = temp.next;
                 int r = top.data;
@@ -106,7 +103,6 @@ public class ImplementStackUsingLinkedList {
         }
 
         public void display() {
-
             if (top == null) {
                 System.out.println("Stack UnderFlow");
                 exit(1);
