@@ -47,7 +47,7 @@ public class BalancedBrackets {
                     break;
                 case ']':
                     check = stack.pop();
-                    if (check == '(' || check == '}') {
+                    if (check == '(' || check == '{') {
                         return false;
                     }
                     break;
