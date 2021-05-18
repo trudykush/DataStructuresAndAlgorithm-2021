@@ -21,6 +21,7 @@ public class BalancedBrackets {
         // using ArrayDeque is faster than using Stack class
         Deque<Character> stack = new ArrayDeque<>();
 
+        // Traversing the expression
         for (int i = 0; i < inputStr.length(); i++) {
             char x = inputStr.charAt(i);
 
