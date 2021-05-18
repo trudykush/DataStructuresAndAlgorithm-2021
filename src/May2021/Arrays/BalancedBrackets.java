@@ -26,10 +26,15 @@ public class BalancedBrackets {
             char x = inputStr.charAt(i);
 
             if(x == '(' || x == '[' || x == '{') {
+                // push the element in the stack
                 stack.push(x);
                 continue;
             }
 
+            /*
+            * If current char is not opening bracket, then it must be closing.
+            * So stack cannot be empty at this period.
+            * */
             if (stack.isEmpty()) {
                 return false;
             }
@@ -55,6 +60,7 @@ public class BalancedBrackets {
                     break;
             }
         }
+        // check the empty stack
         return (stack.isEmpty());
     }
 }
