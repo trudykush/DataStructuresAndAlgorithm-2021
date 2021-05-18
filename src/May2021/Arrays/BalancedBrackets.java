@@ -18,6 +18,7 @@ public class BalancedBrackets {
 
     private static boolean areBracketsBalanced(String inputStr) {
 
+        // using ArrayDeque is faster than using Stack class
         Deque<Character> stack = new ArrayDeque<>();
 
         for (int i = 0; i < inputStr.length(); i++) {
