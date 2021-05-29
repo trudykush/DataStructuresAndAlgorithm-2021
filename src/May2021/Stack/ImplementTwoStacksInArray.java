@@ -73,6 +73,16 @@ public class ImplementTwoStacksInArray {
             return 0;
         }
 
-
+        public int pop2() {
+            if (top2 < size) {
+                int x = arr[top2];
+                top2++;
+                return x;
+            } else {
+                System.out.println("Stack underflow");
+                System.exit(0);
+            }
+            return 0;
+        }
     }
 }
