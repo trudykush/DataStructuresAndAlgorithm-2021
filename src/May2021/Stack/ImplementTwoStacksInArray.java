@@ -9,24 +9,32 @@ public class ImplementTwoStacksInArray {
 
         while (numberOfCases-- > 0) {
             MyStack myStack = new MyStack();
+            System.out.println("Enter the size of array");
+            int n = sc.nextInt();
 
+            // size should be less than n
             System.out.println("Enter the size of first array");
             int n1 = sc.nextInt();
             for (int i = 0; i < n1; i++) {
-                myStack.push(sc.nextInt());
+                myStack.push1(sc.nextInt());
             }
 
+            // size should be less than n-n1
             System.out.println("Enter the size of second array");
             int n2 = sc.nextInt();
             for (int i = 0; i < n2; i++) {
-                myStack.push(sc.nextInt());
+                myStack.push2(sc.nextInt());
             }
         }
         
     }
 
     private static class MyStack {
-        public void push(int nextInt) {
+        public void push1(int nextInt) {
+
+        }
+
+        public void push2(int nextInt) {
 
         }
     }
