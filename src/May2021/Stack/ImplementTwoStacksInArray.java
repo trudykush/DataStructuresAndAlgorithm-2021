@@ -8,9 +8,9 @@ public class ImplementTwoStacksInArray {
         int numberOfCases = sc.nextInt();
 
         while (numberOfCases-- > 0) {
-            MyStack myStack = new MyStack();
             System.out.println("Enter the size of array");
             int n = sc.nextInt();
+            MyStack myStack = new MyStack(n);
 
             // size should be less than n
             System.out.println("Enter the size of first array");
@@ -30,12 +30,35 @@ public class ImplementTwoStacksInArray {
     }
 
     private static class MyStack {
-        public void push1(int nextInt) {
+        int size;
+        int top1, top2;
+        int arr[];
 
+        MyStack(int n) {
+            int size = n;
+            int top1 = -1;
+            int top2 = size;
+            arr = new int[n];
+        }
+
+        public void push1(int nextInt) {
+            if(top1 < top2 - 1) {
+                top1++;
+                arr[top1] = nextInt;
+            } else {
+                System.out.println("Stack overflow");
+                System.exit(1);
+            }
         }
 
         public void push2(int nextInt) {
-
+            if (top1 < top2 - 1) {
+                top2--;
+                arr[top2] = nextInt;
+            } else {
+                System.out.println("Stack overflow");
+                System.exit(1);
+            }
         }
     }
 }
