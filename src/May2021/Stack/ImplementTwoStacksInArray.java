@@ -35,9 +35,9 @@ public class ImplementTwoStacksInArray {
         int arr[];
 
         MyStack(int n) {
-            int size = n;
-            int top1 = -1;
-            int top2 = size;
+            size = n;
+            top1 = -1;
+            top2 = size;
             arr = new int[n];
         }
 
@@ -60,5 +60,19 @@ public class ImplementTwoStacksInArray {
                 System.exit(1);
             }
         }
+
+        public int pop1() {
+            if (top1 >= 0) {
+                int x = arr[top1];
+                top1--;
+                return x;
+            } else {
+                System.out.println("Stack underflow");
+                System.exit(1);
+            }
+            return 0;
+        }
+
+
     }
 }
