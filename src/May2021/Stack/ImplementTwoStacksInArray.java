@@ -26,7 +26,6 @@ public class ImplementTwoStacksInArray {
                 myStack.push2(sc.nextInt());
             }
         }
-        
     }
 
     private static class MyStack {
