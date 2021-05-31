@@ -14,7 +14,16 @@ public class ReverseALinkedList {
                 int value = sc.nextInt();
                 head = obj.insertAtBeginning(head, value);
             }
+            printList(head);
         }
+    }
+
+    private static void printList(Node node) {
+        while (node != null) {
+            System.out.print(node.data + " ");
+            node = node.next;
+        }
+        System.out.println();
     }
 
     private static class Solution {
@@ -24,5 +33,12 @@ public class ReverseALinkedList {
     }
 
     private static class Node {
+        int data;
+        Node next;
+
+        Node(int x) {
+            data = x;
+            next = null;
+        }
     }
 }
