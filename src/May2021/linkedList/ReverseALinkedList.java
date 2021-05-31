@@ -27,8 +27,13 @@ public class ReverseALinkedList {
     }
 
     private static class Solution {
-        public Node insertAtBeginning(Node head, int value) {
-            return null;
+        public Node insertAtBeginning(Node node, int value) {
+            Node temp = new Node(value);
+            if (node == null) {
+                return temp;
+            }
+            temp.next = node;
+            return temp;
         }
     }
 
