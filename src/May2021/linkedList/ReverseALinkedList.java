@@ -12,7 +12,7 @@ public class ReverseALinkedList {
             Solution obj = new Solution();
             for (int i = 0; i < n; i++) {
                 int value = sc.nextInt();
-                head = obj.insertAtBeginning(head, value);
+                head = obj.insertAtEnd(head, value);
             }
             printList(head);
         }
@@ -34,6 +34,21 @@ public class ReverseALinkedList {
             }
             temp.next = node;
             return temp;
+        }
+
+        public Node insertAtEnd(Node head, int value) {
+            Node temp = new Node(value);
+            if (head == null) {
+                return temp;
+            } else {
+                Node ptr = head;
+                while (ptr.next != null) {
+                    ptr = ptr.next;
+                }
+                ptr.next = temp;
+                temp.next = null;
+            }
+            return head;
         }
     }
 
