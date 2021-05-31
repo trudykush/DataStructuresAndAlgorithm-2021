@@ -15,6 +15,8 @@ public class ReverseALinkedList {
                 head = obj.insertAtEnd(head, value);
             }
             printList(head);
+            head = obj.reverse(head);
+            printList(head);
         }
     }
 
@@ -49,6 +51,11 @@ public class ReverseALinkedList {
                 temp.next = null;
             }
             return head;
+        }
+
+        public Node reverse(Node head) {
+
+            return null;
         }
     }
 
