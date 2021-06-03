@@ -9,6 +9,11 @@ public class RemoveDuplicateElementFromSortedLL {
         while (numberOfCases-- > 0) {
             int n = sc.nextInt();
             Node head = null;
+            Solution obj = new Solution();
+            for (int i = 0; i < n; i++) {
+                int value = sc.nextInt();
+                head = obj.insertAtEnd(value);
+            }
         }
     }
 
@@ -18,6 +23,12 @@ public class RemoveDuplicateElementFromSortedLL {
         Node(int x) {
             data = x;
             next = null;
+        }
+    }
+
+    private static class Solution {
+        public Node insertAtEnd(int value) {
+            return null;
         }
     }
 }
