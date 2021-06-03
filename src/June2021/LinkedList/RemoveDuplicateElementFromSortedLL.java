@@ -12,7 +12,7 @@ public class RemoveDuplicateElementFromSortedLL {
             Solution obj = new Solution();
             for (int i = 0; i < n; i++) {
                 int value = sc.nextInt();
-                head = obj.insertAtEnd(value);
+                head = obj.insertAtEnd(head, value);
             }
         }
     }
@@ -37,8 +37,19 @@ public class RemoveDuplicateElementFromSortedLL {
             return temp;
         }
 
-        public Node insertAtEnd(int value) {
-            return null;
+        public Node insertAtEnd(Node head, int value) {
+            Node temp = new Node(value);
+            if (head == null) {
+                return temp;
+            } else {
+                Node ptr = head;
+                while (ptr.next != null) {
+                    ptr = ptr.next;
+                }
+                ptr.next = temp;
+                temp.next = null;
+            }
+            return head;
         }
     }
 }
