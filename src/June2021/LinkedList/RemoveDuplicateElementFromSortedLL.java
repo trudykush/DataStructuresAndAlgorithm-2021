@@ -14,7 +14,24 @@ public class RemoveDuplicateElementFromSortedLL {
                 int value = sc.nextInt();
                 head = obj.insertAtEnd(head, value);
             }
+            printList(head);
+            RemoveDuplicate(head);
         }
+    }
+
+    private static void RemoveDuplicate(Node head) {
+        Node curr = head;
+
+        while (curr != null) {
+        }
+    }
+
+    private static void printList(Node head) {
+        while (head != null) {
+            System.out.print(head.data + " ");
+            head = head.next;
+        }
+        System.out.println();
     }
 
     private static class Node {
