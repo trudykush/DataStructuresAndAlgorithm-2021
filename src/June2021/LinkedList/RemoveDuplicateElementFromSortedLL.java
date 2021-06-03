@@ -27,6 +27,16 @@ public class RemoveDuplicateElementFromSortedLL {
     }
 
     private static class Solution {
+
+        public Node insertAtBeginning(Node head, int value) {
+            Node temp = new Node(value);
+            if (head == null) {
+                return temp;
+            }
+            temp.next = head;
+            return temp;
+        }
+
         public Node insertAtEnd(int value) {
             return null;
         }
