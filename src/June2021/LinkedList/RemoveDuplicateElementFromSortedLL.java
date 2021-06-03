@@ -7,7 +7,17 @@ public class RemoveDuplicateElementFromSortedLL {
         Scanner sc = new Scanner(System.in);
         int numberOfCases = sc.nextInt();
         while (numberOfCases-- > 0) {
+            int n = sc.nextInt();
+            Node head = null;
+        }
+    }
 
+    private static class Node {
+        int data;
+        Node next;
+        Node(int x) {
+            data = x;
+            next = null;
         }
     }
 }
