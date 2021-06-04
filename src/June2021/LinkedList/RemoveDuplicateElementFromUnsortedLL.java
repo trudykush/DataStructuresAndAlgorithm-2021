@@ -14,7 +14,16 @@ public class RemoveDuplicateElementFromUnsortedLL {
                 int value = sc.nextInt();
                 head = obj.insertAtEnd(head, value);
             }
+            printList(head);
         }
+    }
+
+    private static void printList(Node head) {
+        while (head != null) {
+            System.out.print(head.data + " ");
+            head = head.next;
+        }
+        System.out.println();
     }
 
     private static class Node {
