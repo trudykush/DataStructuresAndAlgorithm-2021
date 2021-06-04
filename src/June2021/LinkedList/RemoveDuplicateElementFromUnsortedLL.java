@@ -39,12 +39,27 @@ public class RemoveDuplicateElementFromUnsortedLL {
     private static class Solution {
 
         public Node insertAtBeginning(Node head, int value) {
-
-            return null;
+            Node temp = new Node(value);
+            if (head == null) {
+                return temp;
+            }
+            temp.next = head;
+            return temp;
         }
 
         public Node insertAtEnd(Node head, int value) {
-            return null;
+            Node temp = new Node(value);
+            if (head == null) {
+                return temp;
+            } else {
+                Node ptr = head;
+                while (ptr.next != null) {
+                    ptr = ptr.next;
+                }
+                ptr.next = temp;
+                temp.next = null;
+            }
+            return temp;
         }
     }
 }
