@@ -1,5 +1,6 @@
 package June2021.LinkedList;
 
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class RemoveDuplicateElementFromUnsortedLL {
@@ -15,6 +16,7 @@ public class RemoveDuplicateElementFromUnsortedLL {
                 head = obj.insertAtEnd(head, value);
             }
             printList(head);
+            obj.removeDuplicate(head);
         }
     }
 
@@ -60,6 +62,24 @@ public class RemoveDuplicateElementFromUnsortedLL {
                 temp.next = null;
             }
             return temp;
+        }
+
+        public void removeDuplicate(Node head) {
+            HashSet<Integer> hashSet = new HashSet<>();
+
+            Node current = head;
+            Node prev = null;
+            while (current != null) {
+                int currVal = current.data;
+
+                if (hashSet.contains(currVal)) {
+                    prev.next = current.next;
+                } else {
+                    hashSet.add(currVal);
+                    prev = current;
+                }
+                current = current.next;
+            }
         }
     }
 }
