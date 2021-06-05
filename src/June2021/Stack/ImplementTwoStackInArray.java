@@ -34,9 +34,9 @@ public class ImplementTwoStackInArray {
                     }
                 } else if(queryType == 2) {
                     if (stack_no == 1) {
-                        System.out.println(twoStack.pop1() + " ");
+                        System.out.println(twoStack.pop1(sq) + " ");
                     } else {
-                        System.out.println(twoStack.pop2() + " ");
+                        System.out.println(twoStack.pop2(sq) + " ");
                     }
                 }
 
@@ -47,18 +47,24 @@ public class ImplementTwoStackInArray {
 
     private static class TwoStack {
         public void push1(int a, ImplementTwoStackInArray sq) {
-
+            if (sq.top1 < sq.top2 - 1) {
+                sq.top1++;
+                sq.arr[sq.top1] = a;
+            } else {
+                System.out.println("Stack Overflow");
+                System.exit(1);
+            }
         }
 
         public void push2(int a, ImplementTwoStackInArray sq) {
 
         }
 
-        public int pop1() {
+        public int pop1(ImplementTwoStackInArray sq) {
             return -1;
         }
 
-        public int pop2() {
+        public int pop2(ImplementTwoStackInArray sq) {
             return -1;
         }
     }
