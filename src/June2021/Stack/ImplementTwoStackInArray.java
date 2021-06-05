@@ -29,9 +29,15 @@ public class ImplementTwoStackInArray {
                     int a = sc.nextInt();
                     if (stack_no == 1) {
                         twoStack.push1(a, sq);
+                    } else {
+                        twoStack.push2(a, sq);
                     }
                 } else if(queryType == 2) {
-
+                    if (stack_no == 1) {
+                        System.out.println(twoStack.pop1() + " ");
+                    } else {
+                        System.out.println(twoStack.pop2() + " ");
+                    }
                 }
 
             }
@@ -42,6 +48,18 @@ public class ImplementTwoStackInArray {
     private static class TwoStack {
         public void push1(int a, ImplementTwoStackInArray sq) {
 
+        }
+
+        public void push2(int a, ImplementTwoStackInArray sq) {
+
+        }
+
+        public boolean pop1() {
+            return false;
+        }
+
+        public boolean pop2() {
+            return false;
         }
     }
 }
