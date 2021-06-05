@@ -57,7 +57,13 @@ public class ImplementTwoStackInArray {
         }
 
         public void push2(int a, ImplementTwoStackInArray sq) {
-
+            if (sq.top1 < sq.top2 - 1) {
+                sq.top2--;
+                sq.arr[sq.top2] = a;
+            } else {
+                System.out.println("Stack Underflow");
+                System.exit(1);
+            }
         }
 
         public int pop1(ImplementTwoStackInArray sq) {
