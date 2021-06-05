@@ -54,12 +54,12 @@ public class ImplementTwoStackInArray {
 
         }
 
-        public boolean pop1() {
-            return false;
+        public int pop1() {
+            return -1;
         }
 
-        public boolean pop2() {
-            return false;
+        public int pop2() {
+            return -1;
         }
     }
 }
