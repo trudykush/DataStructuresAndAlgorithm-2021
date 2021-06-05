@@ -76,6 +76,11 @@ public class ImplementTwoStackInArray {
         }
 
         public int pop2(ImplementTwoStackInArray sq) {
+            if (sq.top2 < sq.size) {
+                int x = sq.arr[sq.top2];
+                sq.top2++;
+                return x;
+            }
             return -1;
         }
     }
