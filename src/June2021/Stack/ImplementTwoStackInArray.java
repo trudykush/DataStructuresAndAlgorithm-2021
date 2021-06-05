@@ -20,8 +20,10 @@ public class ImplementTwoStackInArray {
         while (numberOfCases-- > 0) {
             ImplementTwoStackInArray sq = new ImplementTwoStackInArray();
             int q = sc.nextInt();
-
+            TwoStack twoStack = new TwoStack();
         }
     }
 
+    private static class TwoStack {
+    }
 }
