@@ -33,7 +33,15 @@ public class MinimumElementInStack {
                 return;
             }
 
-            ;
+            // if stack is not empty and
+            // new number is less than original minElement
+            if (x < minElement) {
+                myStack.push(2 * x - minElement);
+                minElement = x;
+            } else {
+                myStack.push(x);
+            }
+            System.out.println("Number Inserted: " + x);
         }
 
         public void getMin() {
