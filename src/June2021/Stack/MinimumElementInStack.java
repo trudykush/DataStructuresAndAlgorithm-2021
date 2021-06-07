@@ -49,6 +49,21 @@ public class MinimumElementInStack {
         }
 
         public void pop() {
+            if (myStack.isEmpty()) {
+                System.out.println("Stack is empty");
+                return;
+            }
+            System.out.print("Top element removed: ");
+            Integer t = myStack.pop();
+
+            // minimum will change as the minimum element
+            // of the stack is being removed
+            if (t < minElement) {
+                System.out.println(minElement);
+                minElement = 2 * minElement - t;
+            } else {
+                System.out.println(t);
+            }
 
         }
 
@@ -68,7 +83,6 @@ public class MinimumElementInStack {
             } else {
                 System.out.print(t);
             }
-
         }
     }
 
