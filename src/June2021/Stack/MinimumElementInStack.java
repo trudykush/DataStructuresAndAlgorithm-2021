@@ -26,7 +26,14 @@ public class MinimumElementInStack {
         }
 
         public void push(int x) {
+            if (myStack.isEmpty()) {
+                minElement = x;
+                myStack.push(x);
+                System.out.println("Number inserted" + x);
+                return;
+            }
 
+            ;
         }
 
         public void getMin() {
