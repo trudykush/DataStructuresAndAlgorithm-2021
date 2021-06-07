@@ -53,6 +53,21 @@ public class MinimumElementInStack {
         }
 
         public void peek() {
+            if (myStack.isEmpty()) {
+                System.out.println("Stack is empty");
+                return;
+            }
+
+            // top element
+            Integer t = myStack.peek();
+            System.out.print("Top Most Element is: ");
+
+            // if t < minElement means minEle stores values of t
+            if (t < minElement) {
+                System.out.print(minElement);
+            } else {
+                System.out.print(t);
+            }
 
         }
     }
