@@ -101,5 +101,18 @@ public class MinimumElementInStack {
                 return r;
             }
         }
+
+        public void display() {
+            if (top == null) {
+                System.out.println("Stack Undeflow");
+                System.exit(1);
+            } else {
+                Node temp = top;
+                while (temp != null) {
+                    System.out.println("%d -> " + temp.data);
+                    temp = temp.next;
+                }
+            }
+        }
     }
 }
