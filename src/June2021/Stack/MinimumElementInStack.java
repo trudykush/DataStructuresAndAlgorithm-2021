@@ -18,6 +18,12 @@ public class MinimumElementInStack {
     }
 
     private static class MyStack {
+        MyStackUsingLinkedList myStack;
+        Integer minElement;
+
+        MyStack() {
+            myStack = new MyStackUsingLinkedList();
+        }
 
         public void push(int x) {
 
