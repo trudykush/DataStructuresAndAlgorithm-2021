@@ -70,6 +70,21 @@ public class MinimumElementInStack {
             top = temp;
         }
 
+        // utility function to return top element in a stack
+        public int peek() {
+            // check for empty stack
+            if (!isEmpty()) {
+                return top.data;
+            } else {
+                System.out.println("Stack is Empty");
+                return -1;
+            }
+        }
+
+        private boolean isEmpty() {
+            return top == null;
+        }
+
 
 
 
