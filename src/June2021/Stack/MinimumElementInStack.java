@@ -16,6 +16,7 @@ public class MinimumElementInStack {
     }
 
     private static class MyStack {
+
         public void push(int x) {
 
         }
@@ -31,5 +32,17 @@ public class MinimumElementInStack {
         public void peek() {
 
         }
+    }
+
+    // Implementing Stack from scratch
+    private static class MyStackUsingLinkedList {
+
+        // A linked list node
+        private class Node {
+            int data;
+            Node next;
+        }
+
+        Node top;
     }
 }
