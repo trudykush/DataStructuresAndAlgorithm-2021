@@ -45,7 +45,12 @@ public class MinimumElementInStack {
         }
 
         public void getMin() {
-
+            if (myStack.isEmpty()) {
+                System.out.println("Stack is empty");
+            } else {
+                System.out.println("Minimum element is: " +
+                        minElement);
+            }
         }
 
         public void pop() {
