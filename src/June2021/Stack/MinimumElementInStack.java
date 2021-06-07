@@ -85,8 +85,21 @@ public class MinimumElementInStack {
             return top == null;
         }
 
+        public int pop() {
+            Node temp = top;
+            // if node at temp pointer is null =>
+            // the stack is empty so we return 1-
+            if (temp == null) {
+                return -1;
+            } else {
+                // storing the data at top node and deleting the node
+                temp = temp.next;
+                int r = top.data;
+                top = temp;
 
-
-
+                // returned the data
+                return r;
+            }
+        }
     }
 }
