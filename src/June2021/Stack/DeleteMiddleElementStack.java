@@ -62,6 +62,19 @@ public class DeleteMiddleElementStack {
                 return r;
             }
         }
+
+        public boolean isEmpty() {
+            return head == null;
+        }
+
+        public int peek() {
+            if (!isEmpty()) {
+                return head.data;
+            } else {
+                System.out.println("Stack is Empty");
+                return -1;
+            }
+        }
     }
 
 }
