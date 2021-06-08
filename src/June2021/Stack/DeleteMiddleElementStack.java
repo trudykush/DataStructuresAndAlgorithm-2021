@@ -41,7 +41,13 @@ public class DeleteMiddleElementStack {
             this.head = null;
         }
         public void push(int x) {
+            Node temp = new Node(x);
 
+            if (head == null) {
+                head = temp;
+            }
+            temp.next = head;
+            head = temp;
         }
 
         public int pop() {
