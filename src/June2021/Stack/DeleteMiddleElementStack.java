@@ -75,6 +75,35 @@ public class DeleteMiddleElementStack {
                 return -1;
             }
         }
+
+        public void display() {
+            if (head == null) {
+                System.out.println("Stack is empty");
+                System.exit(1);
+            } else {
+                Node temp = head;
+                while (temp != null) {
+                    System.out.print(temp.data + " ");
+                    temp = temp.next;
+                }
+            }
+        }
+
+        // n -> size of array
+        // curr -> current item number
+        public void deleteMid(int n, int curr) {
+            if (isEmpty() || curr == n) {
+                return;
+            }
+
+            int poppedElement = pop();
+
+            deleteMid(n, curr+1);
+
+            if (curr != n/2) {
+                push(poppedElement);
+            }
+        }
     }
 
 }
