@@ -100,7 +100,7 @@ public class DeleteMiddleElementStack {
 
             deleteMid(n, curr+1);
 
-            if (curr != n/2) {
+            if (curr != Math.floor(n /2)+1) {
                 push(poppedElement);
             }
         }
