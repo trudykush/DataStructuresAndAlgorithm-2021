@@ -32,4 +32,13 @@ public class DeleteMiddleElementStack {
             return -1;
         }
     }
+
+    public static class Node {
+        int data;
+        Node next;
+
+
+
+        Node head;
+    }
 }
