@@ -92,7 +92,8 @@ public class DeleteMiddleElementStack {
         // n -> size of array
         // curr -> current item number
         public void deleteMid(int n, int curr) {
-            if (isEmpty() || curr == n) {
+            if (isEmpty() || curr == n/2) {
+                pop();
                 return;
             }
 
@@ -100,7 +101,7 @@ public class DeleteMiddleElementStack {
 
             deleteMid(n, curr+1);
 
-            if (curr != Math.floor(n /2)+1) {
+            if (curr != (n/2)+1) {
                 push(poppedElement);
             }
         }
