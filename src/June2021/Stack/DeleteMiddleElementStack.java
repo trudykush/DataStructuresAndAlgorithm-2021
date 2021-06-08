@@ -51,7 +51,16 @@ public class DeleteMiddleElementStack {
         }
 
         public int pop() {
-            return -1;
+            Node temp = head;
+            if (temp == null) {
+                System.out.println("Stack underflow");
+                return -1;
+            } else {
+                temp = temp.next;
+                int r = temp.data;
+                head = temp;
+                return r;
+            }
         }
     }
 
