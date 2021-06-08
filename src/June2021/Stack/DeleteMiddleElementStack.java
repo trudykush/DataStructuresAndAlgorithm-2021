@@ -24,6 +24,22 @@ public class DeleteMiddleElementStack {
     }
 
     private static class MyStackLinkedList {
+
+        public class Node {
+            int data;
+            Node next;
+
+            Node(int x) {
+                this.data = x;
+                next = null;
+            }
+        }
+
+        Node head;
+
+        MyStackLinkedList() {
+            this.head = null;
+        }
         public void push(int x) {
 
         }
@@ -33,12 +49,4 @@ public class DeleteMiddleElementStack {
         }
     }
 
-    public static class Node {
-        int data;
-        Node next;
-
-
-
-        Node head;
-    }
 }
