@@ -16,11 +16,10 @@ public class PowerUsingRecursion {
     }
 
     private static int recursivePower(int value, int power) {
-        while (power > 0) {
-            value = (int) Math.pow(value, power);
-            power = power - 1;
-            recursivePower(value, power);
-        }
-        return value;
+       if (power == 0) {
+           return 1;
+       } else {
+           return value * recursivePower(value, power - 1);
+       }
     }
 }
