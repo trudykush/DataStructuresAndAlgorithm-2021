@@ -10,15 +10,17 @@ public class PowerUsingRecursion {
             int value = sc.nextInt();
             int power = sc.nextInt();
 
-            recursivePower(value, power);
+            int result = recursivePower(value, power);
+            System.out.println(result);
         }
     }
 
-    private static void recursivePower(int value, int power) {
+    private static int recursivePower(int value, int power) {
         while (power > 0) {
             value = (int) Math.pow(value, power);
             power = power - 1;
             recursivePower(value, power);
         }
+        return value;
     }
 }
