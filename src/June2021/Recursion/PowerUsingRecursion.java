@@ -15,6 +15,9 @@ public class PowerUsingRecursion {
     }
 
     private static void recursivePower(int value, int power) {
-
+        while (power > 0) {
+            value = (int) Math.pow(value, power);
+            recursivePower(value, power - 1);
+        }
     }
 }
