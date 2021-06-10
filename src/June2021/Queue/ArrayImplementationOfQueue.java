@@ -57,6 +57,18 @@ public class ArrayImplementationOfQueue {
             }
         }
 
+        static void queueDisplay() {
+            int i;
+            if (front == rear) {
+                System.out.println("Queue is Empty");
+                return;
+            }
+
+            for (i = front; i < rear; i++) {
+                System.out.printf(" %d <-- ", queue[i]);
+            }
+            return;
+        }
 
     }
 }
