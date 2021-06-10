@@ -33,8 +33,14 @@ public class ArrayImplementationOfQueue {
             queue = new int[capacity];
         }
 
-        public void enqueue(int a) {
-
+        public void enqueue(int data) {
+            if (capacity == rear) {
+                System.out.println("Queue is full");
+                return;
+            } else {
+                queue[rear] = data;
+                rear++;
+            }
         }
 
         public int dequeue() {
