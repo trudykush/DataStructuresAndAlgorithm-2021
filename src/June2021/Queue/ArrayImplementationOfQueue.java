@@ -16,7 +16,7 @@ public class ArrayImplementationOfQueue {
                     int a = sc.nextInt();
                     obj.enqueue(a);
                 } else if (queueType == 2) {
-                    System.out.println(obj.dequeue() + " ");
+                    obj.dequeue();
                 }
             }
             System.out.println();
@@ -43,8 +43,20 @@ public class ArrayImplementationOfQueue {
             }
         }
 
-        public int dequeue() {
-            return -1;
+        public void dequeue() {
+            if (front == rear) {
+                System.out.println("Queue is empty");
+            } else {
+                for (int i = 0; i < rear - 1; i++) {
+                    queue[i] = queue[i+1];
+                }
+                if (rear < capacity) {
+                    queue[rear] = 0;
+                }
+                rear--;
+            }
         }
+
+
     }
 }
