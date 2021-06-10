@@ -1,5 +1,6 @@
 package June2021.Queue;
 
+import java.util.Queue;
 import java.util.Scanner;
 
 public class ArrayImplementationOfQueue {
@@ -7,8 +8,8 @@ public class ArrayImplementationOfQueue {
         Scanner sc = new Scanner(System.in);
         int numberOfCases = sc.nextInt();
         while (numberOfCases-- > 0) {
-            MyQueue obj = new MyQueue();
             int q = sc.nextInt();
+            MyQueue obj = new MyQueue(q);
             while (q-- > 0) {
                 int queueType = sc.nextInt();
                 if (queueType == 1) {
@@ -23,6 +24,15 @@ public class ArrayImplementationOfQueue {
     }
 
     private static class MyQueue {
+        private static int front, rear, capacity;
+        private static int queue[];
+
+        MyQueue (int c) {
+            front = rear = 0;
+            capacity = c;
+            queue = new int[capacity];
+        }
+
         public void enqueue(int a) {
 
         }
