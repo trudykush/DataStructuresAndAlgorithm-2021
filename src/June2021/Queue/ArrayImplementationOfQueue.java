@@ -70,5 +70,15 @@ public class ArrayImplementationOfQueue {
             return;
         }
 
+        static void queueFront() {
+            if (front == rear) {
+                System.out.print("\nQueue is empty\n");
+                return;
+            }
+            System.out.printf("\nFront Element is: %d", queue[front]);
+            return;
+
+        }
+
     }
 }
