@@ -24,8 +24,15 @@ public class ArrayImpleQueuePart2 {
 
     private static class MyQueue {
 
-        public MyQueue(int q) {
+        int front, rear, size;
+        int capacity;
+        int arr[];
 
+        public MyQueue(int q) {
+            capacity = q;
+            front = this.size = 0;
+            rear = capacity - 1;
+            arr = new int[capacity];
         }
 
         public void enqueue(int a) {
