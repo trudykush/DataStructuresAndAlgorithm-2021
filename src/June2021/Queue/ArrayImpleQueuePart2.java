@@ -35,12 +35,19 @@ public class ArrayImpleQueuePart2 {
             arr = new int[capacity];
         }
 
-        boolean isFull (MyQueue queue) {
-            return queue.size == queue.capacity;
+        boolean isFull () {
+            return size == capacity;
         }
 
-        boolean isEmpty (MyQueue queue) {
-            return queue.size == 0;
+        boolean isEmpty () {
+            return size == 0;
+        }
+
+        int getFront() {
+            if (isEmpty()) {
+                return Integer.MIN_VALUE;
+            }
+            return arr[rear];
         }
 
         public void enqueue(int a) {
