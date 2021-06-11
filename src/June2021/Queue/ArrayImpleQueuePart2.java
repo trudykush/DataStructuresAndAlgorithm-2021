@@ -39,6 +39,10 @@ public class ArrayImpleQueuePart2 {
             return queue.size == queue.capacity;
         }
 
+        boolean isEmpty (MyQueue queue) {
+            return queue.size == 0;
+        }
+
         public void enqueue(int a) {
 
         }
