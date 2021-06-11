@@ -57,8 +57,14 @@ public class ArrayImpleQueuePart2 {
             return arr[rear];
         }
 
-        public void enqueue(int a) {
-
+        public void enqueue(int item) {
+            if (isFull()) {
+                return;
+            }
+            rear = (rear + 1) % capacity;
+            arr[rear] = item;
+            size = size + 1;
+            System.out.println(item + "enqueued to queue");
         }
 
         public void dequeue() {
