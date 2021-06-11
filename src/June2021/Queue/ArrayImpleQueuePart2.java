@@ -47,6 +47,13 @@ public class ArrayImpleQueuePart2 {
             if (isEmpty()) {
                 return Integer.MIN_VALUE;
             }
+            return arr[front];
+        }
+
+        int getRear() {
+            if (isEmpty()) {
+                return Integer.MIN_VALUE;
+            }
             return arr[rear];
         }
 
