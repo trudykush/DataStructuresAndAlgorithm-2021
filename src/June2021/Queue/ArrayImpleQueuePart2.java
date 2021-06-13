@@ -61,6 +61,7 @@ public class ArrayImpleQueuePart2 {
             return arr[rear];
         }
 
+        // to add element to the rear of the queue
         public void enqueue(int item) {
             if (isFull()) {
                 return;
