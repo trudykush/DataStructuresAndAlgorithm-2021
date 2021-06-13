@@ -72,6 +72,7 @@ public class ArrayImpleQueuePart2 {
             System.out.println(item + "enqueued to queue");
         }
 
+        // to remove the element front the of the queue
         public int dequeue() {
             if (isEmpty()) {
                 return Integer.MIN_VALUE;
