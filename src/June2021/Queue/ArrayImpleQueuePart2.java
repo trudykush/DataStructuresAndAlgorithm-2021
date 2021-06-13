@@ -45,7 +45,7 @@ public class ArrayImpleQueuePart2 {
             return size == 0;
         }
 
-
+        // to get the front element, if empty return minimum integer
         int getFront() {
             if (isEmpty()) {
                 return Integer.MIN_VALUE;
