@@ -35,13 +35,16 @@ public class ArrayImpleQueuePart2 {
             arr = new int[capacity];
         }
 
+        // checking the size with capacity
         boolean isFull () {
             return size == capacity;
         }
 
+        // checking whether queue is empty
         boolean isEmpty () {
             return size == 0;
         }
+
 
         int getFront() {
             if (isEmpty()) {
