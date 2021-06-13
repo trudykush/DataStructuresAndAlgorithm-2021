@@ -53,6 +53,7 @@ public class ArrayImpleQueuePart2 {
             return arr[front];
         }
 
+        // to get the rear element, else return minimum
         int getRear() {
             if (isEmpty()) {
                 return Integer.MIN_VALUE;
