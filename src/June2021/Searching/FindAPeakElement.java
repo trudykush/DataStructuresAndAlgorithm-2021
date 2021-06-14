@@ -23,6 +23,8 @@ public class FindAPeakElement {
     }
 
     private static void displayArray(int[] arr, int n) {
-
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
 }
