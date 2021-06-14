@@ -31,7 +31,20 @@ public class FindAPeakElement {
     // Performing binary search to find peak element.
     // An array element is a peak if it is NOT smaller than its neighbours.
     private static int peakElement(int[] arr, int n) {
-        return  -1;
+        return findPeakRecursive(arr, 0, n-1, n);
+    }
+
+    private static int findPeakRecursive(int[] arr, int low, int high, int n) {
+        // finding mid
+        int mid = low + (high - low) / 2;
+
+        // compare the middle element with its neighbours (if exists)
+        if ((mid == 0 || arr[mid - 1] <= arr[mid]) &&
+                (mid == n-1 || arr[mid+1] <= arr[mid])) {
+            return mid;
+        }
+
+        return 0;
     }
 
     private static void displayArray(int[] arr, int n) {
