@@ -27,6 +27,8 @@ public class FindAPeakElement {
         }
     }
 
+    // Performing binary search to find peak element.
+    // An array element is a peak if it is NOT smaller than its neighbours.
     private static void peakElement(int[] arr, int n) {
 
     }
