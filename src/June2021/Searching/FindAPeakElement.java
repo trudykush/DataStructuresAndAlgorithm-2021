@@ -18,8 +18,17 @@ public class FindAPeakElement {
                 arr[i] = sc.nextInt();
             }
 
+            System.out.println("Finding a peak element...");
+
+            peakElement(arr, n);
+
             displayArray(arr, n);
+
         }
+    }
+
+    private static void peakElement(int[] arr, int n) {
+
     }
 
     private static void displayArray(int[] arr, int n) {
