@@ -42,9 +42,11 @@ public class FindAPeakElement {
         if ((mid == 0 || arr[mid - 1] <= arr[mid]) &&
                 (mid == n-1 || arr[mid+1] <= arr[mid])) {
             return mid;
+        } else if (mid > 0 && arr[mid - 1] > arr[mid]) {
+            return findPeakRecursive(arr, low, mid-1, n);
+        } else {
+            return findPeakRecursive(arr,mid+1, high, n);
         }
-
-        return 0;
     }
 
     private static void displayArray(int[] arr, int n) {
