@@ -20,7 +20,8 @@ public class FindAPeakElement {
 
             System.out.println("Finding a peak element...");
 
-            peakElement(arr, n);
+            int result = peakElement(arr, n);
+            System.out.println("The Peak Element is: " + result);
 
             displayArray(arr, n);
 
@@ -29,8 +30,8 @@ public class FindAPeakElement {
 
     // Performing binary search to find peak element.
     // An array element is a peak if it is NOT smaller than its neighbours.
-    private static void peakElement(int[] arr, int n) {
-
+    private static int peakElement(int[] arr, int n) {
+        return  -1;
     }
 
     private static void displayArray(int[] arr, int n) {
