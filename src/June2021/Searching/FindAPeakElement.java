@@ -21,7 +21,7 @@ public class FindAPeakElement {
             System.out.println("Finding a peak element...");
 
             int result = peakElement(arr, n);
-            System.out.println("The Peak Element is: " + result);
+            System.out.println("The Peak Element is: " + arr[result]);
 
             displayArray(arr, n);
 
