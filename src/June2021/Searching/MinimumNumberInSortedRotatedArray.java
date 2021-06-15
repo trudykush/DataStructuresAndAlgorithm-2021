@@ -16,6 +16,7 @@ public class MinimumNumberInSortedRotatedArray {
             }
 
             int result = minimumNumber(arr, n);
+            System.out.println("Result: " + arr[result]);
         }
     }
 
