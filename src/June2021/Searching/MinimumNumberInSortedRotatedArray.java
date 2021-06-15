@@ -28,14 +28,13 @@ public class MinimumNumberInSortedRotatedArray {
 
         int mid = low + (high-low)/2;
 
-        if ((mid > 0 && arr[mid] < arr[mid-1]) ||
+        if ((mid > 0 && arr[mid] < arr[mid-1]) &&
                 (mid < n-1 && arr[mid] < arr[mid+1])) {
             return mid;
         } else if (arr[mid] < low) {
-            minNumberRecursion(arr, low, mid-1, n);
+            return minNumberRecursion(arr, low, mid-1, n);
         } else {
-            minNumberRecursion(arr, mid+1, high, n);
+            return minNumberRecursion(arr, mid+1, high, n);
         }
-        return -1;
     }
 }
