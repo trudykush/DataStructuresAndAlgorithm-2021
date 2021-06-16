@@ -25,7 +25,6 @@ public class MinimumNumberInSortedRotatedArray {
     }
 
     private static int minNumberRecursion(int[] arr, int low, int high, int n) {
-
         int mid = low + (high-low)/2;
 
         if ((mid > 0 && arr[mid] < arr[mid-1]) &&
