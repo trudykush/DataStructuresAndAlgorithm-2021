@@ -24,6 +24,7 @@ public class MinimumNumberInSortedRotatedArray {
         return minNumberRecursion(arr, 0, n-1, n);
     }
 
+    // recursive method to find the minimum number in array
     private static int minNumberRecursion(int[] arr, int low, int high, int n) {
         int mid = low + (high-low)/2;
 
