@@ -19,7 +19,8 @@ public class LinkedListImpleQueue {
                     int a = sc.nextInt();
                     queue.enqueue(a);
                 } else {
-                    queue.dequeue();
+                    int result = queue.dequeue();
+                    System.out.println(result);
                 }
             }
         }
