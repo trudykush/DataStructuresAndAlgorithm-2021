@@ -21,8 +21,36 @@ public class ReverseQueue {
     }
 
     private static class MyQueueByLL {
-        public void enQueue(int queueElement) {
+        QNode front, rear;
 
+        public MyQueueByLL() {
+            this.front = this.rear = null;
+        }
+        public void enQueue(int queueElement) {
+            QNode temp = new QNode(queueElement);
+            if (this.rear == null) {
+                this.front = this.rear = temp;
+                return;
+            }
+
+            this.rear.next = temp;
+            this.rear = temp;
+        }
+
+        public boolean isEmpty() {
+            return this.front != null || this.rear != null;
+        }
+
+
+    }
+
+    private static class QNode {
+        int key;
+        QNode next;
+
+        public QNode(int key) {
+            this.key = key;
+            this.next = null;
         }
     }
 }
