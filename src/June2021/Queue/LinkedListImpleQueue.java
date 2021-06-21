@@ -44,9 +44,9 @@ public class LinkedListImpleQueue {
             this.rear = temp;
         }
 
-        public void dequeue() {
+        public int dequeue() {
             if (this.front == null) {
-                return;
+                return -1;
             }
 
             QNode temp = this.front;
@@ -55,6 +55,7 @@ public class LinkedListImpleQueue {
             if (this.front == null) {
                 this.rear = null;
             }
+            return temp.key;
         }
     }
 
