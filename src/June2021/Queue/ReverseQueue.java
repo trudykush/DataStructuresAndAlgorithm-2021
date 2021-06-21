@@ -12,9 +12,17 @@ public class ReverseQueue {
             System.out.println("Size of Queue");
             int q = sc.nextInt();
 
+            MyQueueByLL queue = new MyQueueByLL();
             while (q-- > 0) {
-
+                int queueElement = sc.nextInt();
+                queue.enQueue(queueElement);
             }
+        }
+    }
+
+    private static class MyQueueByLL {
+        public void enQueue(int queueElement) {
+
         }
     }
 }
