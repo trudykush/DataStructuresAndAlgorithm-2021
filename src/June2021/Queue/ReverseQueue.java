@@ -1,5 +1,6 @@
 package June2021.Queue;
 
+import java.util.Queue;
 import java.util.Scanner;
 
 public class ReverseQueue {
@@ -53,4 +54,24 @@ public class ReverseQueue {
             this.next = null;
         }
     }
+
+    static Queue<Integer> reverseQueue(Queue<Integer> q)
+    {
+        // Base case
+        if (q.isEmpty())
+            return q;
+
+        // Dequeue current item (from front)
+        int data = q.peek();
+        q.remove();
+
+        // Reverse remaining queue
+        q = reverseQueue(q);
+
+        // Enqueue current item (to rear)
+        q.add(data);
+
+        return q;
+    }
+
 }
