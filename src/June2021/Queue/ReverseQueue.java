@@ -41,8 +41,6 @@ public class ReverseQueue {
         public boolean isEmpty() {
             return this.front != null || this.rear != null;
         }
-
-
     }
 
     private static class QNode {
