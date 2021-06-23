@@ -43,7 +43,14 @@ public class QueueUsingTwoStack {
         }
 
         public int dequeue() {
-            return 0;
+            if (s1.isEmpty()) {
+                System.out.println("Queue is Empty");
+                System.exit(0);
+            }
+
+            int x = s1.peek();
+            s1.pop();
+            return x;
         }
     }
 }
