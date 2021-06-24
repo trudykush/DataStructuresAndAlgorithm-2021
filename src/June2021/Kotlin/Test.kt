@@ -18,6 +18,9 @@ fun main() {
     /* //Error
     val resultNull = strLength(nullable)
     println(resultNull)*/
+
+    val resultNull = nullable?.let { strLength(it) }
+    println(resultNull)
 }
 
 fun strLength(nonNull: String) :Int {
