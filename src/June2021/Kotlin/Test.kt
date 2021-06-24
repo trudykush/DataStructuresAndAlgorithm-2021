@@ -12,5 +12,10 @@ fun main() {
     var inferredNonNull = "The compiler assumes non-null"
     inferredNonNull = null
 
+    val result = strLength(neverNull)
+    println(result)
+}
 
+fun strLength(nonNull: String) :Int {
+    return nonNull.length
 }
