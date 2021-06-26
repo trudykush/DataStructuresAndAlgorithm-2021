@@ -36,3 +36,4 @@ open class Lion(val name: String, val origin: String) {
     }
 }
 
+class Asiatic(name: String) : Lion(name = name, origin = "India")
