@@ -17,7 +17,7 @@ fun main1() {
     dog.sayHello()
 }
 
-open class Tiger(val origin: String) {
+open class Tiger(private val origin: String) {
     fun sayHello() {
         println("A Tiger from $origin says: grhhh")
     }
@@ -25,7 +25,14 @@ open class Tiger(val origin: String) {
 
 class SiberianTiger: Tiger("Siberian")
 
-fun main() {
+fun main2() {
     val tiger: Tiger = SiberianTiger()
     tiger.sayHello()
 }
+
+open class Lion(val name: String, val origin: String) {
+    fun sayHello() {
+        println("$name, the lion from $origin says: graoh:")
+    }
+}
+
