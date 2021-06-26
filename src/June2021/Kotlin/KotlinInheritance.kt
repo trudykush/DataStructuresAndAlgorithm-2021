@@ -16,3 +16,10 @@ fun main() {
     val dog: KotlinInheritance = Yorkshire()
     dog.sayHello()
 }
+
+open class Tiger(val origin: String) {
+    fun sayHello() {
+        println("A Tiger from $origin says: grhhh")
+    }
+}
+
