@@ -1,5 +1,14 @@
 package June2021.Kotlin
 
-class KotlinInheritance {
-
+open class KotlinInheritance {
+    open fun sayHello() {
+        println("Saying Hello")
+    }
 }
+
+class Yorkshire: KotlinInheritance() {
+    override fun sayHello() {
+        println("Yorkshire Saying Hello")
+    }
+}
+
