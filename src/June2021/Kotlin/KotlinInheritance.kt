@@ -12,3 +12,7 @@ class Yorkshire: KotlinInheritance() {
     }
 }
 
+fun main() {
+    val dog: KotlinInheritance = Yorkshire()
+    dog.sayHello()
+}
