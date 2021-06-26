@@ -12,7 +12,7 @@ class Yorkshire: KotlinInheritance() {
     }
 }
 
-fun main() {
+fun main1() {
     val dog: KotlinInheritance = Yorkshire()
     dog.sayHello()
 }
@@ -25,3 +25,7 @@ open class Tiger(val origin: String) {
 
 class SiberianTiger: Tiger("Siberian")
 
+fun main() {
+    val tiger: Tiger = SiberianTiger()
+    tiger.sayHello()
+}
