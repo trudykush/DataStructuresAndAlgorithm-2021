@@ -23,3 +23,5 @@ open class Tiger(val origin: String) {
     }
 }
 
+class SiberianTiger: Tiger("Siberian")
+
