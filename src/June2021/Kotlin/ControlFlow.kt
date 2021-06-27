@@ -1,7 +1,8 @@
 package June2021.Kotlin
 
 fun main() {
-
+    println(whenAssigned("Hello"))
+    println(whenAssigned("hello"))
 }
 
 fun whenAssigned(obj: Any): Any {
