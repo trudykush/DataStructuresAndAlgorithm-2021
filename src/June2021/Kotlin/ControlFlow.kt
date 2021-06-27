@@ -1,6 +1,15 @@
 package June2021.Kotlin
 
+import org.omg.CORBA.Object
+
 fun main() {
+
+    val cakes = listOf<String>("carrot", "Cheese", "Chocolate")
+
+    for (cake in cakes) {
+        println("Yummy, it's a $cake cake!")
+    }
+
     println(whenAssigned("Hello"))
     println(whenAssigned("hello"))
     println(whenAssigned(1))
