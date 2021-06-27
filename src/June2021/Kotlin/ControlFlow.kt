@@ -3,6 +3,8 @@ package June2021.Kotlin
 fun main() {
     println(whenAssigned("Hello"))
     println(whenAssigned("hello"))
+    println(whenAssigned(1))
+    println(whenAssigned(ControlFlow()))
 }
 
 fun whenAssigned(obj: Any): Any {
