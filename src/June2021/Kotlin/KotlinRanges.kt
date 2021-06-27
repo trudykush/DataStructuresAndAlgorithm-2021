@@ -24,4 +24,27 @@ fun main() {
     }
 
     println()
+
+    for (c in 'a'..'d') {
+        print(c)
+    }
+
+    println()
+
+    for (c in 'z' downTo 's' step 2) {
+        print(c)
+    }
+
+    println()
+
+    val x = 2
+    if (x in 1..5) {
+        print("x is in range from 1 to 5")
+    }
+
+    if (x !in 6..10) {
+        print("x is not in range from 6 to 10")
+    }
+
+    println()
 }
