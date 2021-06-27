@@ -9,4 +9,8 @@ fun main() {
 
     // Returns false because authors and writes are distinct references
     println(authors === writers)
+
+    println(max(99, -42))
 }
+
+fun max(a: Int, b: Int) = if (a > b) a else b
