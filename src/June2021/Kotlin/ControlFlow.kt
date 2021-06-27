@@ -4,6 +4,7 @@ fun main() {
     println(whenAssigned("Hello"))
     println(whenAssigned("hello"))
     println(whenAssigned(1))
+    println(whenAssigned(31L))
     println(whenAssigned(ControlFlow()))
 }
 
