@@ -1,7 +1,5 @@
 package June2021.Kotlin
 
-import org.omg.CORBA.Object
-
 fun main() {
 
     // while and do-while
