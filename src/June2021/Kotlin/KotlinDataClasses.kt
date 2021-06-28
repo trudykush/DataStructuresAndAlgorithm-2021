@@ -9,6 +9,8 @@ fun main() {
     val user = KotlinDataClasses("Kush", 29)
     println(user)
 
-    val secondUser = KotlinDataClasses("Piyush", 29)
+    val secondUser = KotlinDataClasses("Piyush", 28)
     println("User == secondUser: ${user == secondUser}")
+
+    println(user.hashCode())
 }
