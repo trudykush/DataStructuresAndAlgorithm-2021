@@ -19,4 +19,7 @@ fun main() {
     println(user === user.copy())
     println(user.copy(name = "Kush"))
     println(user.copy(age = 28))
+
+    println("name = ${user.component1()}")
+    println("name = ${user.component2()}")
 }
