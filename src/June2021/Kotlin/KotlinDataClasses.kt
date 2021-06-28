@@ -13,4 +13,10 @@ fun main() {
     println("User == secondUser: ${user == secondUser}")
 
     println(user.hashCode())
+    println(secondUser.hashCode())
+
+    println(user.copy())
+    println(user === user.copy())
+    println(user.copy(name = "Kush"))
+    println(user.copy(age = 28))
 }
