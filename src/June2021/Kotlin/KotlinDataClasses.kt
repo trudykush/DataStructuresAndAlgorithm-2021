@@ -8,4 +8,7 @@ data class KotlinDataClasses(val name: String, val age: Int) {
 fun main() {
     val user = KotlinDataClasses("Kush", 29)
     println(user)
+
+    val secondUser = KotlinDataClasses("Piyush", 29)
+    println("User == secondUser: ${user == secondUser}")
 }
