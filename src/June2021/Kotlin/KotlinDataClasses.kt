@@ -6,5 +6,6 @@ data class KotlinDataClasses(val name: String, val age: Int) {
     }
 
 fun main() {
-
+    val user = KotlinDataClasses("Kush", 29)
+    println(user)
 }
