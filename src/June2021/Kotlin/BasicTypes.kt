@@ -18,6 +18,7 @@ fun main() {
 
     println(boxedB == anotherBoxedB) // Prints 'true'
 
+    //You can use underscores to make number constants more readable:
     val oneMillion = 1_000_000
     val creditCardNumber = 1234_5678_9012_3456L
     val socialSecurityNumber = 999_99_9999L
@@ -27,4 +28,6 @@ fun main() {
     println(creditCardNumber)
     println(hexBytes)
     println(bytes)
+
+
 }
