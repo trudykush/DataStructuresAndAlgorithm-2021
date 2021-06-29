@@ -29,5 +29,20 @@ fun main() {
     println(hexBytes)
     println(bytes)
 
+    /*
+    *   Decimals: 123
+        Longs are tagged by a capital L: 123L
 
+        Hexadecimals: 0x0F
+
+        Binaries: 0b00001011
+
+        Octal literals are not supported.
+
+        Kotlin also supports a conventional notation for floating-point numbers:
+
+        Doubles by default: 123.5, 123.5e10
+
+        Floats are tagged by f or F: 123.5f
+    * */
 }
