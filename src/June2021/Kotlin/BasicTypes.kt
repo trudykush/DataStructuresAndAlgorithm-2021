@@ -17,4 +17,9 @@ fun main() {
     println(boxedB === anotherBoxedB) // false
 
 
+    val b1: Int = 10000
+    println(b1 == b1) // Prints 'true'
+    val boxedB1: Int? = b1
+    val anotherBoxedB1: Int? = b1
+    println(boxedB1 == anotherBoxedB1) // Prints 'true'
 }
