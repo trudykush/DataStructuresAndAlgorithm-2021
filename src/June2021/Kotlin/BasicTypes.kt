@@ -60,4 +60,7 @@ fun main() {
 
     val x2 = 5 / 2.toDouble()
     println(x2 == 2.5)
+
+    val x3 = (1 shl 2) and 0x000FF000
+    println(x3)
 }
