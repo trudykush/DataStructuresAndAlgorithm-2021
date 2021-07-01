@@ -81,4 +81,12 @@ fun main() {
 
     inv() – bitwise inversion
     * */
+
+
+    // Special characters start from an escaping backslash \. The following escape sequences are supported: \t, \b, \n, \r, \', \", \\ and \$
+    val aChar: Char = 'a'
+
+    println(aChar)
+    println('\n') //prints an extra newline character
+    println('\uFF00')
 }
