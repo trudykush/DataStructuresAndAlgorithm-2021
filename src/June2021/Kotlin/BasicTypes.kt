@@ -57,4 +57,7 @@ fun main() {
 
     val x1 = 5L / 2
     println(x1 == 2L)
+
+    val x2 = 5 / 2.toDouble()
+    println(x2 == 2.5)
 }
