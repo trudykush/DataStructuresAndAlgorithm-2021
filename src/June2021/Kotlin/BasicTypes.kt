@@ -62,5 +62,23 @@ fun main() {
     println(x2 == 2.5)
 
     val x3 = (1 shl 2) and 0x000FF000
+    println(0x000FF000)
     println(x3)
+    /*
+    * Here is the complete list of bitwise operations:
+
+    shl(bits) – signed shift left
+
+    shr(bits) – signed shift right
+
+    ushr(bits) – unsigned shift right
+
+    and(bits) – bitwise and
+
+    or(bits) – bitwise or
+
+    xor(bits) – bitwise xor
+
+    inv() – bitwise inversion
+    * */
 }
