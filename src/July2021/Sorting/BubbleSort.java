@@ -22,7 +22,10 @@ public class BubbleSort {
     }
 
     private static void print(int[] arr) {
-
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
     }
 
     private static void bubbleSortSolution(int[] arr, int n) {
