@@ -89,4 +89,21 @@ fun main() {
     println(aChar)
     println('\n') //prints an extra newline character
     println('\uFF00')
+
+
+    /*
+    * The cast operator throws an exception if the cast isn't possible. Thus, it's called unsafe
+    * Note that null cannot be cast to String as this type is not nullable.
+    * */
+    //val x4: String = y as String
+
+    /*
+    *  If y is null, the code above throws an exception. 
+    * To make such code correct for null values, use the nullable type on the right hand side of the cast:
+    * */
+    //val x5: String? = y as String?
+
+
+    //To avoid exceptions, use the safe cast operator as? that returns null on failure.
+    //val x: String? = y as? String
 }
