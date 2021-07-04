@@ -15,11 +15,13 @@ public class InsertionSort {
             for (int i = 0; i < n; i++) {
                 arr[i] = sc.nextInt();
             }
+            printSolution(arr);
             insertionSortSolution(arr);
             printSolution(arr);
         }
     }
 
+    // to print solution
     private static void printSolution(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
