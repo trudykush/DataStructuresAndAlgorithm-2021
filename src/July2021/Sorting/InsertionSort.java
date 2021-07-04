@@ -12,6 +12,7 @@ public class InsertionSort {
             System.out.println("Array length: ");
             int n = sc.nextInt();
             int[] arr = new int[n];
+            System.out.println("Enter " + n + " number of elements to sort");
             for (int i = 0; i < n; i++) {
                 arr[i] = sc.nextInt();
             }
