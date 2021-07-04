@@ -27,6 +27,7 @@ public class InsertionSort {
         System.out.println();
     }
 
+    //buggy solution
     private static void insertionSortSolution(int[] arr, int n) {
         int pointer = arr[0];
         for (int i = 1; i < n; i++) {
@@ -39,6 +40,7 @@ public class InsertionSort {
         }
     }
 
+    // right solution
     private static void insertionSortSolution(int[] arr) {
         int n = arr.length;
         for (int i = 1; i < n; i++) {
