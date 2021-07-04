@@ -17,6 +17,7 @@ public class InsertionSort {
             }
             printSolution(arr);
             insertionSortSolution(arr);
+            System.out.println("--------------------");
             printSolution(arr);
         }
     }
