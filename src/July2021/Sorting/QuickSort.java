@@ -15,6 +15,13 @@ public class QuickSort {
             for (int i = 0; i < n; i++) {
                 arr[i] = sc.nextInt();
             }
+
+            quickSortSolution(arr, n);
+
         }
+    }
+
+    private static void quickSortSolution(int[] arr, int n) {
+
     }
 }
