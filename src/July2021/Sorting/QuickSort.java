@@ -16,12 +16,36 @@ public class QuickSort {
                 arr[i] = sc.nextInt();
             }
 
-            quickSortSolution(arr, n);
+            quickSortSolution(arr, 0,n - 1);
 
         }
     }
 
-    private static void quickSortSolution(int[] arr, int n) {
+    private static void quickSortSolution(int[] arr, int low, int high) {
+        if (low < high) {
+            int pi = partition(arr, low, high);
+
+            quickSortSolution(arr, low, pi-1);
+            quickSortSolution(arr, pi+1, high);
+        }
+    }
+
+    private static int partition(int[] arr, int low, int high) {
+
+        int pivot = arr[high];
+        int i = low - 1;
+
+        for (int j = 0; j <= high - 1; j++) {
+            if (arr[j] < pivot) {
+                i++;
+                swap(arr, i, j);
+            }
+        }
+
+        return 0;
+    }
+
+    private static void swap(int[] arr, int i, int j) {
 
     }
 }
