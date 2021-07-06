@@ -40,6 +40,8 @@ public class QuickSort {
         int i = low - 1;
 
         for (int j = 0; j <= high - 1; j++) {
+            // If current element if smaller
+            // than the pivot
             if (arr[j] < pivot) {
                 i++;
                 swap(arr, i, j);
