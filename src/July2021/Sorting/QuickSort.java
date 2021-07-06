@@ -30,7 +30,7 @@ public class QuickSort {
 
     private static void quickSortSolution(int[] arr, int low, int high) {
         if (low < high) {
-            int pi = partition(arr, low, high);
+            int pi = partition2(arr, low, high);
 
             quickSortSolution(arr, low, pi-1);
             quickSortSolution(arr, pi+1, high);
@@ -70,5 +70,22 @@ public class QuickSort {
         arr[j] = temp;
     }
 
+    private static int partition2(int[] arr, int low, int high) {
+        int pivot = arr[low];
+        int i = low, j = high;
+        while (i < j) {
+            do {
+                i++;
+            } while (arr[i] <= pivot);
+            do {
+                j--;
+            } while (arr[j] >= pivot);
+            if (i < j) {
+                swap(arr, i, j);
+            }
+        }
+        swap(arr, arr[i], arr[j]);
+        return j;
+    }
 
 }
