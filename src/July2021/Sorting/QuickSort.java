@@ -32,7 +32,11 @@ public class QuickSort {
 
     private static int partition(int[] arr, int low, int high) {
 
+        // pivot
         int pivot = arr[high];
+
+        // Index of smaller element and indicates the right position
+        // of pivot found so farS
         int i = low - 1;
 
         for (int j = 0; j <= high - 1; j++) {
@@ -42,8 +46,7 @@ public class QuickSort {
             }
         }
         swap(arr, i+1, high);
-
-        return 0;
+        return (i+1);
     }
 
     private static void swap(int[] arr, int i, int j) {
