@@ -17,8 +17,15 @@ public class QuickSort {
             }
 
             quickSortSolution(arr, 0,n - 1);
-
+            printQuickSortSolution(arr, n);
         }
+    }
+
+    private static void printQuickSortSolution(int[] arr, int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
     }
 
     private static void quickSortSolution(int[] arr, int low, int high) {
