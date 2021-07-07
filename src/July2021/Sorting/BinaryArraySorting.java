@@ -33,7 +33,7 @@ public class BinaryArraySorting {
         int j = n-1;
         while (i < j) {
             if (arr[i] == 1 && arr[j] == 0) {
-                swap(arr, arr[i], arr[j]);
+                swap(arr, i, j);
                 i++;
                 j--;
             } else if (arr[i] == 0) {
