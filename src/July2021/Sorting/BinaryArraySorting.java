@@ -17,7 +17,15 @@ public class BinaryArraySorting {
             }
 
             sortingBinaryNumbers(arr, n);
+            printSolution(arr);
         }
+    }
+
+    private static void printSolution(int[] arr) {
+        for (int j : arr) {
+            System.out.print(j + " ");
+        }
+        System.out.println();
     }
 
     private static void sortingBinaryNumbers(int[] arr, int n) {
