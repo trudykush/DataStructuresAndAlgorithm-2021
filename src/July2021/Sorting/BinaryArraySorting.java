@@ -16,8 +16,29 @@ public class BinaryArraySorting {
                 arr[i] = sc.nextInt();
             }
 
-           // sortingBinaryNumbers(arr, n);
+            sortingBinaryNumbers(arr, n);
         }
     }
 
+    private static void sortingBinaryNumbers(int[] arr, int n) {
+        int i = 0;
+        int j = n-1;
+        while (i < j) {
+            if (arr[i] == 1 && arr[j] == 0) {
+                swap(arr, arr[i], arr[j]);
+                i++;
+                j--;
+            } else if (arr[i] == 0) {
+                i++;
+            } else if (arr[j] == 1) {
+                j--;
+            }
+        }
+    }
+
+    private static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
 }
