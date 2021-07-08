@@ -1,5 +1,6 @@
 package July2021.Sorting;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class CountInversionInArray {
@@ -53,7 +54,17 @@ public class CountInversionInArray {
         return count;
     }
 
+    // Function to count the number of inversions during the merge process
     private static int mergeAndCount(int[] arr, int l, int m, int r) {
+
+        // Left subArray
+        int[] left = Arrays.copyOfRange(arr, l, m+1);
+
+        // Right subArray
+        int[] right = Arrays.copyOfRange(arr, m+1, r+1);
+
+        int i = 0, j = 0, k = l, swaps = 0;
+
         return 0;
     }
 }
