@@ -1,6 +1,5 @@
 package July2021.Sorting;
 
-import java.awt.*;
 import java.util.Scanner;
 
 public class CountInversionInArray {
@@ -51,7 +50,7 @@ public class CountInversionInArray {
             count += mergeAndCount(arr, l, m, r);
         }
 
-        return l;
+        return count;
     }
 
     private static int mergeAndCount(int[] arr, int l, int m, int r) {
