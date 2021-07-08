@@ -18,6 +18,7 @@ public class CountInversionInArray {
             }
 
             int result = enhancedMergeSort(arr, 0, n-1);
+            System.out.println("The count inversion in array is: " + result);
         }
     }
 
