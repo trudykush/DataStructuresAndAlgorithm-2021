@@ -65,6 +65,15 @@ public class CountInversionInArray {
 
         int i = 0, j = 0, k = l, swaps = 0;
 
+        while ((i < left.length) && (j < right.length)) {
+            if (left[i] <= right[j]) {
+                arr[k++] = left[i++];
+            } else {
+                arr[k++] = right[j++];
+                swaps += (m + 1) - (l + i);
+            }
+        }
+
         return 0;
     }
 }
