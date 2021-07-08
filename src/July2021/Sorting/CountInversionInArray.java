@@ -1,5 +1,6 @@
 package July2021.Sorting;
 
+import java.awt.*;
 import java.util.Scanner;
 
 public class CountInversionInArray {
@@ -16,7 +17,7 @@ public class CountInversionInArray {
                 arr[i] = sc.nextInt();
             }
 
-            enhancedMergeSort(arr, n);
+            int result = enhancedMergeSort(arr, 0, n-1);
         }
     }
 
@@ -28,7 +29,32 @@ public class CountInversionInArray {
     * and there are log n levels, so the time complexity is O(n log n).
     * Space Complexity: O(n), Temporary array.
     * */
-    private static void enhancedMergeSort(int[] arr, int n) {
+    private static int enhancedMergeSort(int[] arr, int l, int r) {
 
+        // keep track of the inversion count at a
+        // particular node of the recursion tree
+        int count = 0;
+
+        if (l < r) {
+            int m = l + (r - l)/2;
+
+            // Total inversion count =
+            // left subArray count + right subArray count +  merge count
+
+            // Left subArray count
+            count += enhancedMergeSort(arr, l, m);
+
+            // Right subArray count
+            count += enhancedMergeSort(arr, m+1, r);
+
+            // Merge count
+            count += mergeAndCount(arr, l, m, r);
+        }
+
+        return l;
+    }
+
+    private static int mergeAndCount(int[] arr, int l, int m, int r) {
+        return 0;
     }
 }
