@@ -27,11 +27,29 @@ public class UnionOfTwoSortedArray {
                 arr2[i] = sc.nextInt();
             }
 
-            unionOfArraySolution(arr1, n, arr2, m);
+            int[] result = unionOfArraySolution(arr1, n, arr2, m);
         }
     }
 
-    private static void unionOfArraySolution(int[] arr1, int n, int[] arr2, int m) {
+    private static int[] unionOfArraySolution(int[] arr1, int n, int[] arr2, int m) {
+        int[] solutionArray = new int[n+m];
+        int i = 0, j = 0, k = 0;
 
+        // check if arr1 is repetitive
+        while ((i < n) && (arr1[i] == arr1[i+1])) {
+            i++;
+        }
+        // check if arr2 is repetitive
+        while ((j < m) && (arr2[j] == arr2[j+1])) {
+            j++;
+        }
+
+        while ((i < n) && (j < m)) {
+            if (arr1[i] < arr1[j]) {
+                solutionArray[k++] = arr1[i++];
+            } else {
+                solutionArray[k++] = arr1[j++];
+            }
+        }
     }
 }
