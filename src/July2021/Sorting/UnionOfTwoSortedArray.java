@@ -40,7 +40,7 @@ public class UnionOfTwoSortedArray {
     }
 
     private static int[] unionOfArraySolution(int[] arr1, int n, int[] arr2, int m) {
-        int[] solutionArray = new int[n+m];
+        int[] solutionArray = new int[n];
         int i = 0, j = 0, k = 0;
 
         // check if arr1 is repetitive
