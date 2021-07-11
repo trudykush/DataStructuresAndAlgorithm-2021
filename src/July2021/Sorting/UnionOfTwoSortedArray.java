@@ -9,12 +9,22 @@ public class UnionOfTwoSortedArray {
         System.out.println("Enter the number of cases: ");
         int numberOfCases = sc.nextInt();
         while (numberOfCases-- > 0) {
+            // First array
             System.out.println("Enter the length of first array: ");
             int n = sc.nextInt();
             System.out.println("Enter the elements of the first array: ");
             int[] arr1 = new int[n];
             for (int i = 0; i < n; i++) {
                 arr1[i] = sc.nextInt();
+            }
+
+            // Second array
+            System.out.println("Enter the length of second array: ");
+            int m = sc.nextInt();
+            System.out.println("Enter the elements of the second array: ");
+            int[] arr2 = new int[m];
+            for (int i = 0; i < m; i++) {
+                arr2[i] = sc.nextInt();
             }
         }
     }
