@@ -51,5 +51,15 @@ public class UnionOfTwoSortedArray {
                 solutionArray[k++] = arr1[j++];
             }
         }
+
+        while (i < n) {
+            solutionArray[k++] = arr1[i++];
+        }
+
+        while (j < m) {
+            solutionArray[k++] = arr2[j++];
+        }
+
+        return solutionArray;
     }
 }
