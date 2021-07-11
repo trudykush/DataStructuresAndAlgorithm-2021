@@ -28,7 +28,15 @@ public class UnionOfTwoSortedArray {
             }
 
             int[] result = unionOfArraySolution(arr1, n, arr2, m);
+            printSolution(result);
         }
+    }
+
+    private static void printSolution(int[] result) {
+        for (int j : result) {
+            System.out.print(j + " ");
+        }
+        System.out.println();
     }
 
     private static int[] unionOfArraySolution(int[] arr1, int n, int[] arr2, int m) {
