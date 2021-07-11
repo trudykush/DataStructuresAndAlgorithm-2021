@@ -26,6 +26,12 @@ public class UnionOfTwoSortedArray {
             for (int i = 0; i < m; i++) {
                 arr2[i] = sc.nextInt();
             }
+
+            unionOfArraySolution(arr1, n, arr2, m);
         }
+    }
+
+    private static void unionOfArraySolution(int[] arr1, int n, int[] arr2, int m) {
+
     }
 }
