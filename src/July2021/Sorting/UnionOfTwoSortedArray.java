@@ -83,5 +83,11 @@ public class UnionOfTwoSortedArray {
         } else {
             ans = n;
         }
+
+        int[] newTable = new int[ans + 1];
+
+        System.out.println(arr1[0] + " ");
+
+        ++newTable[arr1[0]];
     }
 }
