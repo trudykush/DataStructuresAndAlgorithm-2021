@@ -73,5 +73,15 @@ public class UnionOfTwoSortedArray {
 
     private static void unionOfArray(int arr1[], int arr2[]) {
 
+        int m = arr1[arr1.length - 1];
+        int n = arr2[arr2.length - 1];
+
+        int ans = 0;
+
+        if (m > n) {
+            ans = m;
+        } else {
+            ans = n;
+        }
     }
 }
