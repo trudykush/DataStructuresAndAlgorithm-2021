@@ -90,8 +90,15 @@ public class UnionOfTwoSortedArray {
         * */
         int[] newTable = new int[ans + 1];
 
+        /*
+        * First element is always present in final answer
+        * */
         System.out.println(arr1[0] + " ");
 
+        /*
+        * Incrementing the First element's count
+        * in it's corresponding index in newTable
+        * */
         ++newTable[arr1[0]];
 
         for (int i = 0; i < arr1.length; i++) {
