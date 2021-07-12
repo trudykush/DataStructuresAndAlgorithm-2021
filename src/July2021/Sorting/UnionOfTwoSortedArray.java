@@ -53,10 +53,10 @@ public class UnionOfTwoSortedArray {
         }
 
         while ((i < n) && (j < m)) {
-            if (arr1[i] < arr1[j]) {
+            if (arr1[i] < arr2[j]) {
                 solutionArray[k++] = arr1[i++];
             } else {
-                solutionArray[k++] = arr1[j++];
+                solutionArray[k++] = arr2[j++];
             }
         }
 
