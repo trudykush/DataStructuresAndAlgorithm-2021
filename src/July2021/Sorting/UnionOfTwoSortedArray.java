@@ -101,6 +101,10 @@ public class UnionOfTwoSortedArray {
         * */
         ++newTable[arr1[0]];
 
+        /*
+        * Starting traversing the first array from 1st
+        * index till last
+        * */
         for (int i = 0; i < arr1.length; i++) {
             if (arr1[i] != arr1[i-1]) {
                 System.out.println(arr1[i] + " ");
@@ -108,7 +112,15 @@ public class UnionOfTwoSortedArray {
             }
         }
 
+        /*
+        * Finding only non common elements from
+        * 2nd array
+        * */
         for (int i : arr2) {
+            /*
+            * By checking whether it's already present
+            * in newTable or not
+            * */
             if (newTable[i] == 0) {
                 System.out.println(i + " ");
                 ++newTable[i];
