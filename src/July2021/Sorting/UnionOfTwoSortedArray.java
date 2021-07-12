@@ -73,17 +73,21 @@ public class UnionOfTwoSortedArray {
 
     private static void unionOfArray(int arr1[], int arr2[]) {
 
+        // Taking max element present in either array
         int m = arr1[arr1.length - 1];
         int n = arr2[arr2.length - 1];
 
         int ans = 0;
 
-        if (m > n) {
-            ans = m;
-        } else {
-            ans = n;
-        }
+        ans = Math.max(m, n);
 
+        /*
+        * Finding elements from 1st array (non-duplicates only).
+        * Using another array for storing union elements
+        * of both arrays.
+        * Assuming max element present in array is not more
+        * than 10^7
+        * */
         int[] newTable = new int[ans + 1];
 
         System.out.println(arr1[0] + " ");
