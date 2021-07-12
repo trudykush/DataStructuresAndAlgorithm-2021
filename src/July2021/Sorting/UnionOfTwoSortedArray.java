@@ -96,5 +96,12 @@ public class UnionOfTwoSortedArray {
                 ++newTable[arr1[i]];
             }
         }
+
+        for (int i : arr2) {
+            if (newTable[i] == 0) {
+                System.out.println(i + " ");
+                ++newTable[i];
+            }
+        }
     }
 }
