@@ -70,4 +70,8 @@ public class UnionOfTwoSortedArray {
 
         return solutionArray;
     }
+
+    private static void unionOfArray(int arr1[], int arr2[]) {
+
+    }
 }
