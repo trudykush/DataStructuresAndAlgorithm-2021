@@ -8,7 +8,12 @@ public class IntersectionOfTwoSortedArrays {
         System.out.println("Enter the number of test cases: ");
         int n = sc.nextInt();
         while (n-- > 0) {
+            System.out.println("Enter the size of first array");
+            int m1 = sc.nextInt();
+            System.out.println("Enter the elements of first array: ");
+            for (int i = 0; i < m1; i++) {
 
+            }
         }
     }
 }
