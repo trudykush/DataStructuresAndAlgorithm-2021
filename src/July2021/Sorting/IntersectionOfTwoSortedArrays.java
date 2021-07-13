@@ -24,11 +24,12 @@ public class IntersectionOfTwoSortedArrays {
                 arr2[i] = sc.nextInt();
             }
 
-            intersectionSolution(arr1, m1, arr2, m2);
+            int[] result = intersectionSolution(arr1, m1, arr2, m2);
         }
     }
 
-    private static void intersectionSolution(int[] arr1, int m1, int[] arr2, int m2) {
+    private static int[] intersectionSolution(int[] arr1, int m1, int[] arr2, int m2) {
 
+        return arr1;
     }
 }
