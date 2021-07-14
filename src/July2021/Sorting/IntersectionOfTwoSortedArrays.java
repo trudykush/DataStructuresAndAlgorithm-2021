@@ -30,6 +30,10 @@ public class IntersectionOfTwoSortedArrays {
 
     private static int[] intersectionSolution(int[] arr1, int m1, int[] arr2, int m2) {
 
+        int i = 0, j = 0;
+        while (i < m1 && j < m2) {
+
+        }
         return arr1;
     }
 }
