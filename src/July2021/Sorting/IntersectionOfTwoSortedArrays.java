@@ -32,7 +32,14 @@ public class IntersectionOfTwoSortedArrays {
 
         int i = 0, j = 0;
         while (i < m1 && j < m2) {
-
+            if (arr1[i] < arr2[j]) {
+                i++;
+            } else if (arr2[j] < arr1[i]) {
+                j++;
+            } else {
+                System.out.println(arr2[j++] + " ");
+                i++;
+            }
         }
         return arr1;
     }
