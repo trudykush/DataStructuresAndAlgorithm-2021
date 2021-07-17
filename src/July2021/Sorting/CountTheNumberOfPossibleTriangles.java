@@ -26,6 +26,7 @@ public class CountTheNumberOfPossibleTriangles {
         }
     }
 
+    // Time complexity: O(n^2)
     private static int countingTriangles(int[] arr, int n) {
         Arrays.sort(arr);
         int count = 0;
@@ -42,7 +43,8 @@ public class CountTheNumberOfPossibleTriangles {
                     r--;
                 } else {
                     /*
-                    *
+                    * If not possible check for higher value of
+                    * arr[i]
                     * */
                     l++;
                 }
