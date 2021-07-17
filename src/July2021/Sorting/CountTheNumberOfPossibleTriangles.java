@@ -19,6 +19,12 @@ public class CountTheNumberOfPossibleTriangles {
             for (int i = 0; i < n; i++) {
                 arr[i] = sc.nextInt();
             }
+
+            countingTriangles(arr, n);
         }
+    }
+
+    private static void countingTriangles(int[] arr, int n) {
+
     }
 }
