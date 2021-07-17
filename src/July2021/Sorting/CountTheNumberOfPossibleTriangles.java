@@ -1,5 +1,6 @@
 package July2021.Sorting;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /*
@@ -25,6 +26,6 @@ public class CountTheNumberOfPossibleTriangles {
     }
 
     private static void countingTriangles(int[] arr, int n) {
-
+        Arrays.sort(arr);
     }
 }
