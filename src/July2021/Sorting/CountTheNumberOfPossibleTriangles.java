@@ -33,9 +33,17 @@ public class CountTheNumberOfPossibleTriangles {
             int l = 0, r = i - 1;
             while (l < r) {
                 if (arr[l] + arr[r] > arr[i]) {
+                    /*
+                    * If it is possible, with arr[l], arr[r]
+                    * and arr[i] then it is also possible
+                    * with arr[l+1]..arr[r-1], arr[r] and arr[i]
+                    * */
                     count += r - l;
                     r--;
                 } else {
+                    /*
+                    *
+                    * */
                     l++;
                 }
             }
