@@ -21,7 +21,8 @@ public class CountTheNumberOfPossibleTriangles {
                 arr[i] = sc.nextInt();
             }
 
-            countingTriangles(arr, n);
+            int result = countingTriangles(arr, n);
+            System.out.println("Number of possible triangle " + result);
         }
     }
 
