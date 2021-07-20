@@ -14,6 +14,12 @@ public class Sort012 {
             for (int i = 0; i < n; i++) {
                 arr[i] = sc.nextInt();
             }
+
+            sorting012(arr, n);
         }
+    }
+
+    private static void sorting012(int[] arr, int n) {
+
     }
 }
