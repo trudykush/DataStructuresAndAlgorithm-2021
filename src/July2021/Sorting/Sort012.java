@@ -20,6 +20,9 @@ public class Sort012 {
     }
 
     private static void sorting012(int[] arr, int n) {
+        int lo = 0;
+        int high = n-1;
+        int mid = 0, temp = 0;
 
     }
 }
