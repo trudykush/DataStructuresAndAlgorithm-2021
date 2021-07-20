@@ -34,6 +34,13 @@ public class Sort012 {
                     break;
                 case 1:
                     mid++;
+                    break;
+                case 2:
+                    temp = arr[high];
+                    arr[high] = arr[mid];
+                    arr[mid] = temp;
+                    high--;
+                    break;
             }
 
         }
