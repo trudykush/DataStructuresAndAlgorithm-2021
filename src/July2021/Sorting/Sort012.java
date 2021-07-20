@@ -8,7 +8,12 @@ public class Sort012 {
         System.out.println("Enter the number of cases: ");
         int numberOfCases = sc.nextInt();
         while (numberOfCases-- > 0) {
-            System.out.println();
+            System.out.println("Enter the size of array: ");
+            int n = sc.nextInt();
+            int[] arr = new int[n];
+            for (int i = 0; i < n; i++) {
+                arr[i] = sc.nextInt();
+            }
         }
     }
 }
