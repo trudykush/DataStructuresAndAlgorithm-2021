@@ -23,6 +23,19 @@ public class Sort012 {
         int lo = 0;
         int high = n-1;
         int mid = 0, temp = 0;
+        while (mid < high) {
+            switch (arr[mid]) {
+                case 0:
+                    temp = arr[lo];
+                    arr[lo] = arr[mid];
+                    arr[mid] = temp;
+                    lo++;
+                    mid++;
+                    break;
+                case 1:
+                    mid++;
+            }
 
+        }
     }
 }
