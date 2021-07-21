@@ -16,7 +16,12 @@ public class Sort012 {
             }
 
             sorting012(arr, n);
+            print(arr);
         }
+    }
+
+    private static void print(int[] arr) {
+
     }
 
     private static void sorting012(int[] arr, int n) {
