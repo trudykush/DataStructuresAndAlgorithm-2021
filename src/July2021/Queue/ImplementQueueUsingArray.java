@@ -36,7 +36,7 @@ public class ImplementQueueUsingArray {
         }
 
         public void enQueue(int element) {
-            if (capacity == rear) {
+            if (rear == capacity) {
                 System.out.println("Queue is Full - Overflow condition");
                 return;
             } else {
@@ -45,8 +45,21 @@ public class ImplementQueueUsingArray {
             }
         }
 
-        public void deQueue() {
+        public int deQueue() {
+            if (front == rear) {
+                System.out.println("Queue is empty - Underflow condition");
+                return -1;
+            } else {
+                if (rear - 1 >= 0) {
+                    System.arraycopy(queue, 1, queue, 0, rear - 1);
+                }
+                if (rear < capacity) {
+                    queue[rear] = 0;
+                }
 
+                rear--;
+            }
+            return queue[front];
         }
     }
 }
