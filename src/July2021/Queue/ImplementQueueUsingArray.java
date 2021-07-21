@@ -26,12 +26,23 @@ public class ImplementQueueUsingArray {
     }
 
     private static class Solution {
-        public Solution(int q) {
+        int front, rear, capacity;
+        int[] queue;
 
+        public Solution(int c) {
+            front = rear = 0;
+            capacity = c;
+            queue = new int[capacity];
         }
 
         public void enQueue(int element) {
-
+            if (capacity == rear) {
+                System.out.println("Queue is Full - Overflow condition");
+                return;
+            } else {
+                queue[rear] = element;
+                rear++;
+            }
         }
 
         public void deQueue() {
