@@ -21,7 +21,9 @@ public class Sort012 {
     }
 
     private static void print(int[] arr) {
-
+        for (int x : arr) {
+            System.out.println(x+ " ");
+        }
     }
 
     private static void sorting012(int[] arr, int n) {
