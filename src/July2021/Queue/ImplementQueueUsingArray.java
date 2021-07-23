@@ -73,5 +73,11 @@ public class ImplementQueueUsingArray {
              }
              return;
         }
+
+        public void queueFront() {
+            if (front == rear) {
+
+            }
+        }
     }
 }
