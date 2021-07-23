@@ -76,7 +76,8 @@ public class ImplementQueueUsingArray {
 
         public void queueFront() {
             if (front == rear) {
-
+                System.out.print("\nQueue is empty\n");
+                return;
             }
         }
     }
