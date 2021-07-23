@@ -65,8 +65,13 @@ public class ImplementQueueUsingArray {
          public void displayQueue() {
             int i;
             if (front == rear) {
-
+                System.out.println("Queue is Empty");
+                return;
             }
+
+             for (int j = front; j < rear; j++) {
+                 System.out.println();
+             }
         }
     }
 }
