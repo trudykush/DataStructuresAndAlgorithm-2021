@@ -1,6 +1,7 @@
 package July2021.Queue;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 public class QueueUsingStack {
     public static void main(String[] args) {
@@ -25,8 +26,22 @@ public class QueueUsingStack {
 
     private static class QueueStack {
          int capacity;
+         Stack<Integer> stack;
+
         public QueueStack(int c) {
             this.capacity = c;
+        }
+
+        private void push(int element) {
+            stack.push(element);
+        }
+
+        private int pop() {
+            if (stack == null) {
+                System.out.println("Stack Underflow");
+                System.exit(0);
+            }
+            return stack.pop();
         }
 
         public void enqueue(int element) {
@@ -34,6 +49,7 @@ public class QueueUsingStack {
         }
 
         public void deQueue() {
+
         }
     }
 }
