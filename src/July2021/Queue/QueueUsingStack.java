@@ -45,11 +45,23 @@ public class QueueUsingStack {
         }
 
         public void enqueue(int element) {
-
+            push(element);
         }
 
-        public void deQueue() {
-
+        public int deQueue() {
+            int x, res = 0;
+            if (stack.isEmpty()) {
+                System.out.println("Queue is Empty");
+                System.exit(0);
+            } else if (stack.size() == 1) {
+                return pop();
+            } else {
+                x = pop();
+                res = deQueue();
+                push(x);
+                return res;
+            }
+            return 0;
         }
     }
 }
