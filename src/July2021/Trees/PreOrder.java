@@ -21,3 +21,7 @@ class Node {
         left = right = null;
     }
 }
+
+class BinaryTree {
+    Node root;
+}
