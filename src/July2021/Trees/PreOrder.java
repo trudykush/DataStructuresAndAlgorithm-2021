@@ -24,4 +24,9 @@ class Node {
 
 class BinaryTree {
     Node root;
+
+    BinaryTree() {
+        root = null;
+    }
+
 }
