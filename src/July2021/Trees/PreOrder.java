@@ -12,4 +12,12 @@ public class PreOrder {
 }
 
 
-class Node {}
+class Node {
+    int key;
+    Node left, right;
+
+    public Node(int item) {
+        key = item;
+        left = right = null;
+    }
+}
