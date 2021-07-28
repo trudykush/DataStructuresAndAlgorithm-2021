@@ -29,4 +29,11 @@ class BinaryTree {
         root = null;
     }
 
+    void printPreOrder(Node node) {
+
+    }
+
+    void printPreOrder() {
+        printPreOrder(root);
+    }
 }
