@@ -31,6 +31,15 @@ class BinaryTree {
 
     void printPreOrder(Node node) {
 
+        if (node == null) {
+            return;
+        }
+
+        System.out.println(node.key + " ");
+
+        printPreOrder(node.left);
+
+        printPreOrder(node.right);
     }
 
     void printPreOrder() {
