@@ -51,6 +51,12 @@ class BinaryTree {
     }
 
     private void printPostOrder(Node root) {
+        if (root == null) {
+            return;
+        }
 
+        printPreOrder(root.left);
+        printPreOrder(root.right);
+        System.out.println(root.key + " ");
     }
 }
