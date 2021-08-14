@@ -45,4 +45,12 @@ class BinaryTree {
     void printPreOrder() {
         printPreOrder(root);
     }
+
+    void printPostOrder() {
+        printPostOrder(root);
+    }
+
+    private void printPostOrder(Node root) {
+
+    }
 }
