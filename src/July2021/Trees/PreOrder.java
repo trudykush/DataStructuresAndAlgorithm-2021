@@ -65,6 +65,11 @@ class BinaryTree {
     }
 
     private void printInOrder(Node root) {
-
+        if (root == null) {
+            return;
+        }
+        printInOrder(root.left);
+        System.out.println(root.key + " ");
+        printInOrder(root.right);
     }
 }
