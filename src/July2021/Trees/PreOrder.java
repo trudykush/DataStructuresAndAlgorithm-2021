@@ -59,4 +59,12 @@ class BinaryTree {
         printPreOrder(root.right);
         System.out.println(root.key + " ");
     }
+
+    void printInOrder() {
+        printInOrder(root);
+    }
+
+    private void printInOrder(Node root) {
+
+    }
 }
