@@ -8,9 +8,10 @@ public class PreOrder {
         tree.root.right = new Node(3);
         tree.root.left.left = new Node(4);
         tree.root.left.right = new Node(5);
+
+        tree.printPreOrder();
     }
 }
-
 
 class Node {
     int key;
@@ -36,9 +37,7 @@ class BinaryTree {
         }
 
         System.out.println(node.key + " ");
-
         printPreOrder(node.left);
-
         printPreOrder(node.right);
     }
 
