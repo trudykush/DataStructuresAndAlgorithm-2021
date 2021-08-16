@@ -10,6 +10,8 @@ public class PreOrder {
         tree.root.left.right = new Node(5);
 
         tree.printPreOrder();
+        tree.printInOrder();
+        tree.printPostOrder();
     }
 }
 
