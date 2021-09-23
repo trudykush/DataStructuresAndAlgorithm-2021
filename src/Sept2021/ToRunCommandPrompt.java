@@ -19,6 +19,5 @@ public class ToRunCommandPrompt {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }
