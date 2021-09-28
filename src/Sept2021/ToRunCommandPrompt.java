@@ -4,7 +4,6 @@ import java.io.IOException;
 
 public class ToRunCommandPrompt {
     public static void main(String[] args) {
-
 //        String command = "cmd.exe /c start "+"cmd.exe";
 //        try {
 //            Process child = Runtime.getRuntime().exec(command);
