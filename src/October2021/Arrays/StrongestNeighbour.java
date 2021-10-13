@@ -15,8 +15,13 @@ public class StrongestNeighbour {
             for (int i = 0; i < arr.length; i++) {
                 arr[i] = sc.nextInt();
             }
-            maximumAdjacent(arr, sizeOfArray);
+            int[] result = maximumAdjacent(arr, sizeOfArray);
+            printResult(result);
         }
+    }
+
+    private static void printResult(int[] result) {
+
     }
 
     private static int[] maximumAdjacent(int[] arr, int n) {
