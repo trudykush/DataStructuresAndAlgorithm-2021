@@ -13,9 +13,17 @@ public class BubbleSort {
                arr[i] = sc.nextInt();
             }
             
-            //solutionBubbleSort(arr, n);
+            solutionBubbleSort(arr, n);
         }
     }
 
+    private static void solutionBubbleSort(int[] arr, int n) {
 
+        int i, j, temp;
+        boolean swapped;
+
+        for (i = 0; i < n - 1; i++) {
+
+        }
+    }
 }
