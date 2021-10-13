@@ -28,7 +28,7 @@ public class StrongestNeighbour {
     }
 
     private static int[] maximumAdjacent(int[] arr, int n) {
-        int[] result = new int[n];
+        int[] result = new int[n-1];
         for (int i = 0; i < n-1; i++) {
             if (arr[i] >= arr[i+1]) {
                 result[i] = arr[i];
