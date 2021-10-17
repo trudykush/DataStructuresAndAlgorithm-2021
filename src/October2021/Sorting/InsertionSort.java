@@ -13,7 +13,15 @@ public class InsertionSort {
                 arr[i] = sc.nextInt();
             }
             int[] result = solutionInsertionSort(arr, n);
+            printArray(result);
         }
+    }
+
+    private static void printArray(int[] result) {
+        for (int i = 0; i < result.length; i++) {
+            System.out.print(result[i] + " ");
+        }
+        System.out.println();
     }
 
     private static int[] solutionInsertionSort(int[] arr, int n) {
@@ -29,4 +37,6 @@ public class InsertionSort {
         }
         return arr;
     }
+    
+    
 }
