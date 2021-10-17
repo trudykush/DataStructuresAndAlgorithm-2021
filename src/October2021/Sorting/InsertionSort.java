@@ -12,12 +12,11 @@ public class InsertionSort {
             for (int i = 0; i < n; i++) {
                 arr[i] = sc.nextInt();
             }
-
-            solutionInsertionSort(arr, n);
+            int[] result = solutionInsertionSort(arr, n);
         }
     }
 
-    private static void solutionInsertionSort(int[] arr, int n) {
+    private static int[] solutionInsertionSort(int[] arr, int n) {
         for (int i = 1; i < n; i++) {
             int key = arr[i];
             int j = i - 1;
@@ -28,5 +27,6 @@ public class InsertionSort {
             }
             arr[j+1] = key;
         }
+        return arr;
     }
 }
