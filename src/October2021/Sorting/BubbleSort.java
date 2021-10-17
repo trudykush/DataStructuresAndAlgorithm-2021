@@ -17,8 +17,8 @@ public class BubbleSort {
         }
     }
 
+    // Worst case - O(n) because of swapped boolean
     private static void solutionBubbleSort(int[] arr, int n) {
-
         int i, j, temp;
         boolean swapped;
 
