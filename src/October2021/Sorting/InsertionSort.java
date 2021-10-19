@@ -37,6 +37,4 @@ public class InsertionSort {
         }
         return arr;
     }
-    
-    
 }

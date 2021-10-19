@@ -21,7 +21,7 @@ public class StrongestNeighbour {
     }
 
     private static void printResult(int[] result) {
-        for (int i = 0; i < result.length - 1; i++) {
+        for (int i : result) {
             System.out.print(result[i] + " ");
         }
         System.out.println();
