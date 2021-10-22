@@ -27,6 +27,7 @@ public class StrongestNeighbour {
         System.out.println();
     }
 
+    // Extra space
     private static int[] maximumAdjacent(int[] arr, int n) {
         int[] result = new int[n-1];
         for (int i = 0; i < n-1; i++) {
@@ -39,6 +40,7 @@ public class StrongestNeighbour {
         return result;
     }
 
+    // In-Line solution
     private static int[] maxAdjacentPart2(int[] arr, int n) {
         for (int i = 0; i < n-1; i++) {
             if (arr[i] >= arr[i+1]) {
