@@ -18,6 +18,7 @@ public class HeapSort {
         }
     }
 
+    // Hint: https://www.geeksforgeeks.org/heap-sort/
     private static void sort(int[] arr, int n) {
 
     }
