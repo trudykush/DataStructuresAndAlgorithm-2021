@@ -27,6 +27,12 @@ public class FindMissingAndRepeating {
     }
 
     private static int[] findTwoElements(int[] arr, int n) {
+        int repeat = 0;
+        int missing = 0;
+
+        for (int i = 0; i < n; i++) {
+
+        }
 
         return new int[0];
     }
