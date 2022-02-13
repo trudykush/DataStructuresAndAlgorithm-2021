@@ -29,11 +29,19 @@ public class FindMissingAndRepeating {
     private static int[] findTwoElements(int[] arr, int n) {
         int repeat = 0;
         int missing = 0;
+        int count = 1;
 
-        for (int i = 0; i < n; i++) {
-
+        for (int i = 0; i < n - 1; i++) {
+            if (arr[i] == count) {
+                count++;
+                continue;
+            } else if (arr[i] == arr[i+1]) {
+                repeat = arr[i];
+            } else {
+                missing = count;
+            }
         }
-
+        System.out.println(repeat + " " + missing);
         return new int[0];
     }
 }
