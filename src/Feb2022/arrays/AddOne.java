@@ -20,5 +20,10 @@ public class AddOne {
             index--;
         }
 
+        if (index < 0) {
+            digits.set(0, 1);
+        } else {
+            digits.set(index, digits.get(index) + 1);
+        }
     }
 }
