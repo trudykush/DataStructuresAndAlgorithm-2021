@@ -12,6 +12,10 @@ public class ReturnArrayAppearingTwice {
 
     private static int[] appearsTwice(int[] arr) {
 
+        int res = arr[0];
+        for (int j : arr) {
+            res = res ^ j;
+        }
 
         return new int[0];
     }
