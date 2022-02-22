@@ -4,13 +4,19 @@ import java.util.*;
 
 public class ReturnArrayAppearingTwice {
     public static void main(String[] args) {
-        Integer[] arr = {8, 3, 2, 7, 3, 5, 8};
+        int[] arr = {8, 3, 2, 7, 3, 5, 8};
 
-        Vector<Integer> result = appearsTwice(arr);
-        System.out.println(Arrays.toString(new Vector[]{result}));
+        int[] result = appearsTwice(arr);
+        System.out.println(Arrays.toString(result));
     }
 
-    private static Vector<Integer> appearsTwice(Integer[] arr) {
+    private static int[] appearsTwice(int[] arr) {
+
+
+        return new int[0];
+    }
+
+    /*private static Vector<Integer> appearsTwice(Integer[] arr) {
 
         Set<Integer> integerSet = new HashSet<>();
         Vector<Integer> vectorArr = new Vector<>(Arrays.asList(arr));
@@ -25,5 +31,5 @@ public class ReturnArrayAppearingTwice {
             }
         }
         return vectorArr;
-    }
+    }*/
 }
