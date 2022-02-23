@@ -14,8 +14,15 @@ public class InsertionSort {
             }
 
             solutionInsertionSort(arr, n);
-
+            printSolution(arr, n);
         }
+    }
+
+    private static void printSolution(int[] arr, int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
     }
 
     private static void solutionInsertionSort(int[] arr, int n) {
