@@ -53,7 +53,6 @@ public class QuickSort {
 
         for (int j = 0; j <= high - 1; j++) {
             if (arr[j] < pivot) {
-                // Increment index of smaller element
                 i++;
                 swap(arr, i, j);
             }
