@@ -43,7 +43,6 @@ public class QuickSort {
     * to left of pivot and all greater elements to right of pivot
     * */
     private static int partition(int[] arr, int low, int high) {
-
         // pivot
         int pivot = arr[high];
 
