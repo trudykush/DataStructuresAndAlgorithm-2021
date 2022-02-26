@@ -16,7 +16,6 @@ public class ReturnArrayAppearingTwice {
         for (int j : arr) {
             res = res ^ j;
         }
-
         return new int[0];
     }
 
