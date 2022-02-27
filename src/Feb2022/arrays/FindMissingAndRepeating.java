@@ -20,10 +20,8 @@ public class FindMissingAndRepeating {
                 for (int i = 0; i < n; i++) {
                     arr[i] = Integer.parseInt(str[i]);
                 }
-
                 int[] ans = findTwoElements(arr, n);
                 System.out.println(ans[0] + " " + ans[1]);*/
-
                 hashMapSolution();
             }
         } catch (IOException e) {
